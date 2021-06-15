@@ -1,0 +1,3 @@
+﻿  exam.c
+C:\TIL\Cwork\Pro0615\exam.c(55,10): warning C4087: 'getchar': 'void' 매개 변수 목록을 사용하여 선언되었습니다.
+  Pro0615.vcxproj -> C:\TIL\Cwork\Pro0615\Debug\Pro0615.exe
