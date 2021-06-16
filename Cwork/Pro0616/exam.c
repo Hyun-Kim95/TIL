@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 int main() {
-	printf("Ä«¿îÆ®ÇÏ±â+º§¼Ò¸®\n");
+	printf("ì¹´ìš´íŠ¸í•˜ê¸°+ë²¨ì†Œë¦¬\n");
 	int count;
-	printf("Ä«¿îÅÍÀÇ ÃÊ±â°ªÀ» ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("ì¹´ìš´í„°ì˜ ì´ˆê¸°ê°’ì„ ì…ë ¥í•˜ì‹œì˜¤: ");
 	scanf("%d", &count);
 	while (count>0)
 	{
@@ -12,7 +12,7 @@ int main() {
 	}
 	printf("\a\n\n");
 
-	printf("100 ÀÌÇÏÀÇ ¼ö Áß¿¡ 3ÀÇ ¹è¼öÀÇ ÇÕ ±¸ÇÏ±â\n");
+	printf("100 ì´í•˜ì˜ ìˆ˜ ì¤‘ì— 3ì˜ ë°°ìˆ˜ì˜ í•© êµ¬í•˜ê¸°\n");
 	int hap = 0, i = 1;
 	while (i<=100)
 	{
@@ -20,13 +20,13 @@ int main() {
 			hap += i;
 		i++;
 	}
-	printf("1ºÎÅÍ 100 »çÀÌÀÇ ¸ğµç 3ÀÇ ¹è¼öÀÇ ÇÕÀº %dÀÔ´Ï´Ù.\n\n", hap);
+	printf("1ë¶€í„° 100 ì‚¬ì´ì˜ ëª¨ë“  3ì˜ ë°°ìˆ˜ì˜ í•©ì€ %dì…ë‹ˆë‹¤.\n\n", hap);
 
-	printf("ÀÔ·ÂÇÑ Á¤¼öÀÇ ¸ğµç ¾à¼ö¸¦ Ãâ·Â\n");
+	printf("ì…ë ¥í•œ ì •ìˆ˜ì˜ ëª¨ë“  ì•½ìˆ˜ë¥¼ ì¶œë ¥\n");
 	int j=2, a, yaksu;
-	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 	scanf("%d", &a);
-	printf("¾à¼ö: 1");
+	printf("ì•½ìˆ˜: 1");
 	while (j <= a)
 	{
 		if (a % j == 0)
@@ -35,7 +35,7 @@ int main() {
 	}
 	printf("\n\n");
 
-	printf("\n¹İº¹·çÆ®¸¦ ÀÌ¿ëÇÏ¿© ÆĞÅÏ Ãâ·Â\n");
+	printf("\në°˜ë³µë£¨íŠ¸ë¥¼ ì´ìš©í•˜ì—¬ íŒ¨í„´ ì¶œë ¥\n");
 	int k = 1;
 	while (k<= 7)
 	{
@@ -57,14 +57,14 @@ int main() {
 	printf("\n\n");
 
 
-	printf("(·£´ı)Àµ³îÀÌ\n");
+	printf("(ëœë¤)ìœ³ë†€ì´\n");
 	int aa, bb, cc, dd, sum=0;
 	srand(time(NULL));
-	aa = 1-((rand() % 10) / 6);	// È®·ü Àû¿ë
-	if (aa == 1)				// 0~9±îÁö¸¦ 6À¸·Î ³ª´« ¸ò
-		printf("x");			// 0~5±îÁö´Â 0, 6~9±îÁö´Â 1 ÀÌ¹Ç·Î
-	else						// 1¿¡¼­ ±× °ªÀ» »©ÁÜÀ¸·Î¼­ 1ÀÌ³ª¿Ã È®·ü 60%
-		printf("o");			// 0ÀÌ ³ª¿Ã È®·ü 40%°¡ µÊ
+	aa = 1-((rand() % 10) / 6);	// í™•ë¥  ì ìš©
+	if (aa == 1)				// 0~9ê¹Œì§€ë¥¼ 6ìœ¼ë¡œ ë‚˜ëˆˆ ëª«
+		printf("x");			// 0~5ê¹Œì§€ëŠ” 0, 6~9ê¹Œì§€ëŠ” 1 ì´ë¯€ë¡œ
+	else						// 1ì—ì„œ ê·¸ ê°’ì„ ë¹¼ì¤Œìœ¼ë¡œì„œ 1ì´ë‚˜ì˜¬ í™•ë¥  60%
+		printf("o");			// 0ì´ ë‚˜ì˜¬ í™•ë¥  40%ê°€ ë¨
 	bb = rand() % 2;
 	if (bb == 1)
 		printf("x");
@@ -83,19 +83,19 @@ int main() {
 	sum = aa + bb + cc + dd;
 	switch (sum)
 	{
-		case 0:printf(":Àµ"); break;
-		case 1:printf(":°É"); break;
-		case 2:printf(":°³"); break;
-		case 3:printf(":µµ"); break;
-		case 4:printf(":¸ğ"); break;
+		case 0:printf(":ìœ³"); break;
+		case 1:printf(":ê±¸"); break;
+		case 2:printf(":ê°œ"); break;
+		case 3:printf(":ë„"); break;
+		case 4:printf(":ëª¨"); break;
 		default:
-			printf("¿À·ù\n");
+			printf("ì˜¤ë¥˜\n");
 			break;
 	}
 	printf("\n\n");
-	printf("º°(*) Ãâ·Â\n");
+	printf("ë³„(*) ì¶œë ¥\n");
 	int get_a;
-	printf("¿øÇÏ´Â °¹¼ö ÀÔ·Â:");
+	printf("ì›í•˜ëŠ” ê°¯ìˆ˜ ì…ë ¥:");
 	scanf("%d", &get_a);
 	for (int ii = 0; ii <= get_a; ii++) {
 		for (int jj = 0; jj <=get_a - ii; jj++) {
@@ -104,9 +104,9 @@ int main() {
 		printf("\n");
 	}
 	printf("\n\n");
-	printf("ÁßÃ¸ ¹İº¹¹®\n");
+	printf("ì¤‘ì²© ë°˜ë³µë¬¸\n");
 	int zero0, zero1, five;
-	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 	scanf("%d", &five);
 	for (zero0 = 1; zero0 <= five; zero0++)
 	{
@@ -118,7 +118,7 @@ int main() {
 	}
 	printf("\n\n");
 
-	printf("°è»ê±â º¯Çü\n");
+	printf("ê³„ì‚°ê¸° ë³€í˜•\n");
 	printf("*****************\n");
 	printf("a---- Add\n");
 	printf("s---- Subtract\n");
@@ -131,12 +131,12 @@ int main() {
 		int one, two;
 		char bee;
 		
-		printf("¿¬»êÀ» ÀÔ·ÂÇÏ½Ã¿À:");
-		scanf("%c", &bee);
+		printf("ì—°ì‚°ì„ ì…ë ¥í•˜ì‹œì˜¤:");
+		scanf(" %c", &bee);
 		if (bee == 'q')
 			break;
-		printf("µÎ¼ö¸¦ °ø¹éÀ¸·Î ºĞ¸®ÇÏ¿© ÀÔ·ÂÇÏ½Ã¿À:");
-		scanf("%d %d", &one, &two);
+		printf("ë‘ìˆ˜ë¥¼ ê³µë°±ìœ¼ë¡œ ë¶„ë¦¬í•˜ì—¬ ì…ë ¥í•˜ì‹œì˜¤:");
+		scanf(" %d %d", &one, &two);
 		switch (bee)
 		{
 			case 'a': printf("\n%d\n", one + two); break;
@@ -146,7 +146,7 @@ int main() {
 		}
 	}
 	printf("\n\n");
-	printf("2¿Í 100»çÀÌ¿¡ ÀÖ´Â ¸ğµç ¼Ò¼ö Ãâ·Â\n");
+	printf("2ì™€ 100ì‚¬ì´ì— ìˆëŠ” ëª¨ë“  ì†Œìˆ˜ ì¶œë ¥\n");
 	
 	for(int i = 2;i<100;i++)
 	{
@@ -163,7 +163,7 @@ int main() {
 	while (1)
 	{
 		int stick;
-		printf("¸·´ëÀÇ ³ôÀÌ(Á¾·á: -1): ");
+		printf("ë§‰ëŒ€ì˜ ë†’ì´(ì¢…ë£Œ: -1): ");
 		scanf("%d", &stick);
 		if (stick == -1)
 			break;
