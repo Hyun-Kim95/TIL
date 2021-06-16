@@ -1,155 +1,150 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int main() {					// í˜•ë³€í™˜ ì˜ˆì œ
-	int i;
-	double f;
+int main() {					// Çüº¯È¯ ¿¹Á¦
+	//int i;
+	//double f;
 
-	f = 5 / 4;					// í”¼ì—°ì‚°ìê°€ ì •ìˆ˜ì—¬ì„œ ì •ìˆ˜ ì—°ì‚°ìœ¼ë¡œ ê³„ì‚°ë¨
-	printf("%f\n", f);			// 1.0
+	//f = 5 / 4;					// ÇÇ¿¬»êÀÚ°¡ Á¤¼ö¿©¼­ Á¤¼ö ¿¬»êÀ¸·Î °è»êµÊ
+	//printf("%f\n", f);			// 1.0
 
-	f = (double)5 / 4;			// í˜•ë³€í™˜ ì—°ì‚° í›„ ê³„ì‚° í•¨
-	printf("%f\n", f);			// 1.25
+	//f = (double)5 / 4;			// Çüº¯È¯ ¿¬»ê ÈÄ °è»ê ÇÔ
+	//printf("%f\n", f);			// 1.25
 
-	f = 5.0 / 4;				// 5ê°€ doubleí˜•ì´ë¯€ë¡œ 4ë„ doubleí˜•ìœ¼ë¡œ ìë™ í˜•ë³€í™˜ ë¨
-	printf("%f\n", f);			// 1.25
+	//f = 5.0 / 4;				// 5°¡ doubleÇüÀÌ¹Ç·Î 4µµ doubleÇüÀ¸·Î ÀÚµ¿ Çüº¯È¯ µÊ
+	//printf("%f\n", f);			// 1.25
 
-	f = (double)5 / (double)4;	// ìœ„ì™€ ê°™ìŒ
-	printf("%f\n", f);
+	//f = (double)5 / (double)4;	// À§¿Í °°À½
+	//printf("%f\n", f);
 
-	i = 1.3 + 1.8;				// 3.1ì´ ì •ìˆ˜í˜• iì— ëŒ€ì…ë˜ë©´ ë‚´ë¦¼ ë³€í™˜ì´ ë°œìƒ
-	printf("%d\n", i);			// 3
+	//i = 1.3 + 1.8;				// 3.1ÀÌ Á¤¼öÇü i¿¡ ´ëÀÔµÇ¸é ³»¸² º¯È¯ÀÌ ¹ß»ı
+	//printf("%d\n", i);			// 3
 
-	i = (int)1.3 + (int)1.8;	// í”¼ì—°ì‚°ì ëª¨ë‘ 1ë¡œ ë°”ë€ í›„ ê³„ì‚°
-	printf("%d\n", i);			// 2
+	//i = (int)1.3 + (int)1.8;	// ÇÇ¿¬»êÀÚ ¸ğµÎ 1·Î ¹Ù²ï ÈÄ °è»ê
+	//printf("%d\n", i);			// 2
 
-	printf("------if ë¬¸ ì˜ˆì œ---------\n");
-	int a, b = 0;
-	char c;
-	printf("ìˆ˜ì‹ì„ ì…ë ¥í•˜ì‹œì˜¤(1 + 1): ");
-	scanf("%d %c %d", &a, &c, &b);
-	if (c == '+')
-		printf("%d %c %d = %d\n", a, c, b, a+b);
-	else if (c=='-')
-		printf("%d %c %d = %d\n", a, c, b, a-b);
-	else if (c=='*')
-		printf("%d %c %d = %d\n", a, c, b, a*b);
-	else if (c == '/')
-		printf("%d %c %d = %d\n", a, c, b, a / b);
-	else
-		printf("%d %c %d = %d\n", a, c, b, a%b);
+	//printf("------if ¹® ¿¹Á¦---------\n");
+	//int a, b = 0;
+	//char c;
+	//printf("¼ö½ÄÀ» ÀÔ·ÂÇÏ½Ã¿À: ");
+	//scanf("%d %c %d", &a, &c, &b);
+	//if (c == '+')
+	//	printf("%d %c %d = %d\n", a, c, b, a+b);
+	//else if (c=='-')
+	//	printf("%d %c %d = %d\n", a, c, b, a-b);
+	//else if (c=='*')
+	//	printf("%d %c %d = %d\n", a, c, b, a*b);
+	//else if (c == '/')
+	//	printf("%d %c %d = %d\n", a, c, b, a / b);
+	//else
+	//	printf("%d %c %d = %d\n", a, c, b, a%b);
 
-	printf("\nì…ë ¥ë°›ì€ ìˆ«ìê°€ 4ì˜ ë°°ìˆ˜ì¸ì§€, ì•„ë‹ˆë©´ ì…ë ¥ë°›ì€ ìˆ˜ë³´ë‹¤ í° 4ì˜ ë°°ìˆ˜ ì¶œë ¥\n");
+	//printf("--------------------------\n");
 
-	int ch1;
-	
-	printf("ìˆ«ì ì…ë ¥:");
-	scanf("%d", &ch1);
-	if (ch1 % 4 == 0) {
-		printf("%d \n", ch1);
-	}else {
-		printf("%d \n", 4 * (ch1 / 4 + 1));
-	}
+	//int ch1;
+	//
+	//printf("¼ıÀÚ ÀÔ·Â:");
+	//scanf("%d", &ch1);
+	//if (ch1 % 4 == 0) {
+	//	printf("%d \n", ch1);
+	//}else {
+	//	printf("%d \n", 4 * (ch1 / 4 + 1));
+	//}
 
-	printf("\ní•˜ë‚˜ì˜ ë¬¸ìë¥¼ ì½ì–´ì™€ì„œ ëª¨ìŒê³¼ ììŒì„ êµ¬ë¶„\n");
-	
-	char chch;
-	printf("í•˜ë‚˜ì˜ ë¬¸ìë¥¼ ì…ë ¥í•˜ì‹œì˜¤:\n");
-	
-	getchar("%c", &chch);
-
-	switch (chch)
-	{
+	printf("--------------------------\n");
+	char ch;
+	printf("¹®ÀÚ¸¦ ÀÔ·ÂÇÏ½Ã¿À(¤¡ ¤À ¤Á): ");
+	getchar("%c", &ch);						// ÇÏ³ªÀÇ ¹®ÀÚ¸¦ ÀĞÀ½
+	switch (ch) {
 		case 'a':
-			printf("ëª¨ìŒì…ë‹ˆë‹¤.\n");
+			printf("¸ğÀ½ÀÔ´Ï´Ù.\n");
 			break;
 		case 'e':
-			printf("ëª¨ìŒì…ë‹ˆë‹¤.\n");
+			printf("¸ğÀ½ÀÔ´Ï´Ù.\n");
 			break;
 		case 'i':
-			printf("ëª¨ìŒì…ë‹ˆë‹¤.\n");
+			printf("¸ğÀ½ÀÔ´Ï´Ù.\n");
 			break;
 		case 'o':
-			printf("ëª¨ìŒì…ë‹ˆë‹¤.\n");
+			printf("¸ğÀ½ÀÔ´Ï´Ù.\n");
 			break;
 		case 'u':
-			printf("ëª¨ìŒì…ë‹ˆë‹¤.\n");
+			printf("¸ğÀ½ÀÔ´Ï´Ù.\n");
 			break;
 		default:
-			printf("ììŒì…ë‹ˆë‹¤.\n");
+			printf("ÀÚÀ½ÀÔ´Ï´Ù.\n");
 			break;
 	}
 	
-	printf("\në‘ë²ˆì§¸ ì…ë ¥í•œ ìˆ˜ê°€ ì²«ë²ˆì§¸ ì…ë ¥í•œ ìˆ˜ì˜ ì•½ìˆ˜ì¸ì§€ í™•ì¸\n");
+	printf("--------------------------\n");
 
 	int x, y;
-	printf("ì²«ë²ˆì§¸ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤:");
+	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À:");
 	scanf("%d", &x);
-	printf("ë‘ë²ˆì§¸ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤:");
+	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À:");
 	scanf("%d", &y);
 	if (x % y == 0)
-		printf("ì•½ìˆ˜ì…ë‹ˆë‹¤.\n");
+		printf("¾à¼öÀÔ´Ï´Ù.\n");
 	else
-		printf("ì•½ìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.\n");
+		printf("¾à¼ö°¡ ¾Æ´Õ´Ï´Ù.\n");
 	
-	printf("\nì…‹ ì¤‘ì— ê°€ì¥ ì‘ì€ ìˆ˜ ì¶œë ¥\n");
+	printf("--------------------------\n");
 
-	int i1, j1, w1, z1;
-	printf("3ê°œì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
-	scanf("%d %d %d", &i1, &j1, &w1);
-	if (i1 < j1)
-		if (i1 < w1)
-			z1 = i1;
+	int i, j, w, z;
+	printf("3°³ÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+	scanf("%d %d %d", &i, &j, &w);
+	if (i < j)
+		if (i < w)
+			z = i;
 		else
-			z1 = w1;
+			z = w;
 	else
-		if (j1 < w1)
-			z1 = j1;
+		if (j < w)
+			z = j;
 		else
-			z1 = w1;
-	printf("ì œì¼ ì‘ì€ ì •ìˆ˜ëŠ” %dì…ë‹ˆë‹¤.\n", z1);
+			z = w;
+	printf("Á¦ÀÏ ÀÛÀº Á¤¼ö´Â %dÀÔ´Ï´Ù.\n", z);
 
-	printf("\nì»´í“¨í„°ë‘ ê°€ìœ„ ë°”ìœ„ ë³´\n");
-	
+	printf("--------------------------\n");
+
 	int hum, com;
-	srand(time(NULL));
-	printf("ì„ íƒí•˜ì‹œì˜¤(1: ê°€ìœ„ 2: ë°”ìœ„ 3: ë³´)");
+	printf("¼±ÅÃÇÏ½Ã¿À(1: °¡À§ 2: ¹ÙÀ§ 3: º¸)");
 	scanf("%d", &hum);
-	com = rand() % 3 + 1;	// 0 ~ 2 ì¤‘ì— ëœë¤í•œ ìˆ˜ë¥¼ ê³ ë¥´ê³  1ì„ ë”í•´ì¤Œ(ì¦‰, 1 ~ 3)
+	com = rand() % 3 + 1;	// 0 ~ 2 Áß¿¡ ·£´ıÇÑ ¼ö¸¦ °í¸£°í 1À» ´õÇØÁÜ(Áï, 1 ~ 3)
 	if (hum == com)
-		printf("ë¹„ê²¼ìŠµë‹ˆë‹¤.\n");
+		printf("ºñ°å½À´Ï´Ù.\n");
 	else if (hum == 1)
 		if (com == 2)
-			printf("ì»´í“¨í„°ê°€ ì´ê²¼ìŒ.\n");
+			printf("ÄÄÇ»ÅÍ°¡ ÀÌ°åÀ½.\n");
 		else
-			printf("ì‚¬ìš©ìê°€ ì´ê²¼ìŒ.\n");
+			printf("»ç¿ëÀÚ°¡ ÀÌ°åÀ½.\n");
 	else if (hum == 2)
 		if (com == 3)
-			printf("ì»´í“¨í„°ê°€ ì´ê²¼ìŒ.\n");
+			printf("ÄÄÇ»ÅÍ°¡ ÀÌ°åÀ½.\n");
 		else
-			printf("ì‚¬ìš©ìê°€ ì´ê²¼ìŒ.\n");
+			printf("»ç¿ëÀÚ°¡ ÀÌ°åÀ½.\n");
 	else
 		if (com == 1)
-			printf("ì»´í“¨í„°ê°€ ì´ê²¼ìŒ.\n");
+			printf("ÄÄÇ»ÅÍ°¡ ÀÌ°åÀ½.\n");
 		else
-			printf("ì‚¬ìš©ìê°€ ì´ê²¼ìŒ.\n");
+			printf("»ç¿ëÀÚ°¡ ÀÌ°åÀ½.\n");
 
-	printf("\në†€ì´ê¸°êµ¬ ì œí•œ í™•ì¸(í‚¤:140, ë‚˜ì´:10)\n");
+	printf("--------------------------\n");
 
 	int h, age;
-	printf("í‚¤ë¥¼ ì…ë ¥í•˜ì‹œì˜¤(cm):");
+	printf("Å°¸¦ ÀÔ·ÂÇÏ½Ã¿À(cm)");
 	scanf("%d", &h);
-	printf("ë‚˜ì´ë¥¼ ì…ë ¥í•˜ì‹œì˜¤:");
+	printf("³ªÀÌ¸¦ ÀÔ·ÂÇÏ½Ã¿À.");
 	scanf("%d", &age);
 	if (h >= 140 && age >= 10)
-		printf("íƒ€ë„ ì¢‹ìŠµë‹ˆë‹¤.\n");
+		printf("Å¸µµ ÁÁ½À´Ï´Ù.\n");
 	else
-		printf("ì£„ì†¡í•©ë‹ˆë‹¤.\n");
+		printf("ÁË¼ÛÇÕ´Ï´Ù.\n");
 
-	printf("\nì›” ë³„ ì˜ì–´ ì•½ì–´\n");
+	printf("--------------------------\n");
 
 	int m;
-	printf("ì›”ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
+	printf("¿ù¹øÈ£¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
 	scanf("%d", &m);
 	switch (m) {
 		case 1: printf("Jan");
@@ -178,74 +173,9 @@ int main() {					// í˜•ë³€í™˜ ì˜ˆì œ
 			break;
 	}
 
-	printf("\ní‘œì¤€ì²´ì¤‘ì¸ì§€ í™•ì¸\n");
+	printf("--------------------------\n");
 
-	int weight, height;
-	double ans;
-	printf("ì²´ì¤‘ê³¼ í‚¤ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
-	scanf("%d %d", &weight, &height);
-	ans = (height - 100) * 0.9;
-	if (weight < ans)
-		printf("ì €ì²´ì¤‘ì…ë‹ˆë‹¤.\n");
-	else if (weight == ans)
-		printf("í‘œì¤€ì…ë‹ˆë‹¤.\n");
-	else
-		printf("ê³¼ì²´ì¤‘ì…ë‹ˆë‹¤.\n");
 
-	printf("\nììœ ì´ìš©ê¶Œì˜ ê°€ê²©ì„ ê³„ì‚°\n");
-
-	int time_a, age1, payy;
-	printf("í˜„ì¬ ì‹œê°„ê³¼ ë‚˜ì´ë¥¼ ì…ë ¥í•˜ì‹œì˜¤(ì‹œê°„, ë‚˜ì´): ");
-	scanf("%d %d", &time_a, &age1);
-	if (time_a < 17)
-		if (age1 <= 12 || age1 >= 65)
-			payy = 25000;
-		else
-			payy = 34000;
-	else
-		payy = 10000;
-	printf("ìš”ê¸ˆì€ %dì…ë‹ˆë‹¤.\n", payy);
-
-	printf("\ní•¨ìˆ˜ì˜ ê°’ì„ ê³„ì‚°\n");
-
-	int xx, fx;
-	printf("xì˜ ê°’ì„ ì…ë ¥í•˜ì‹œì˜¤:");
-	scanf("%d", &xx);
-	if (xx > 0)
-		fx = xx * 7 + 2;
-	else
-		fx = xx * xx - xx * 9 + 2;
-	printf("f(x)ì˜ ê°’ì€ %d\n", fx);
-
-	printf("\nì¢Œí‘œë³„ ì‚¬ë¶„ë©´\n");
-
-	int x1, y1;
-	printf("ì¢Œí‘œ(x,y): ");
-	scanf("%d %d", &x1, &y1);
-	if (x1 > 0)
-		if (y1 > 0)
-			printf("1ì‚¬ë¶„ë©´\n");
-		else
-			printf("4ì‚¬ë¶„ë©´\n");
-	else
-		if (y1 > 0)
-			printf("2ì‚¬ë¶„ë©´\n");
-		else
-			printf("3ì‚¬ë¶„ë©´\n");
-
-	printf("\nrì€ rectangle, tëŠ” triangle, cëŠ” circle, ë‚˜ë¨¸ì§€ëŠ” unwnown\n");
-
-	char actt;
-	printf("ë¬¸ìë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
-	scanf("%c", &actt);
-	if (actt == 'R' || actt == 'r')
-		printf("Rectangle\n");
-	else if (actt == 'T' || actt == 't')
-		printf("Triangle\n");
-	else if (actt == 'C' || actt == 'c')
-		printf("Circle\n");
-	else
-		printf("Unknown\n");
 
 	return 0;
 }
