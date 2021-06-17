@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 int main() {
-	printf("ì¹´ìš´íŠ¸í•˜ê¸°+ë²¨ì†Œë¦¬\n");
+	printf("Ä«¿îÆ®ÇÏ±â+º§¼Ò¸®\n");
 	int count;
-	printf("ì¹´ìš´í„°ì˜ ì´ˆê¸°ê°’ì„ ì…ë ¥í•˜ì‹œì˜¤: ");
+	printf("Ä«¿îÅÍÀÇ ÃÊ±â°ªÀ» ÀÔ·ÂÇÏ½Ã¿À: ");
 	scanf("%d", &count);
 	while (count>0)
 	{
@@ -12,7 +12,7 @@ int main() {
 	}
 	printf("\a\n\n");
 
-	printf("100 ì´í•˜ì˜ ìˆ˜ ì¤‘ì— 3ì˜ ë°°ìˆ˜ì˜ í•© êµ¬í•˜ê¸°\n");
+	printf("100 ÀÌÇÏÀÇ ¼ö Áß¿¡ 3ÀÇ ¹è¼öÀÇ ÇÕ ±¸ÇÏ±â\n");
 	int hap = 0, i = 1;
 	while (i<=100)
 	{
@@ -20,13 +20,13 @@ int main() {
 			hap += i;
 		i++;
 	}
-	printf("1ë¶€í„° 100 ì‚¬ì´ì˜ ëª¨ë“  3ì˜ ë°°ìˆ˜ì˜ í•©ì€ %dì…ë‹ˆë‹¤.\n\n", hap);
+	printf("1ºÎÅÍ 100 »çÀÌÀÇ ¸ğµç 3ÀÇ ¹è¼öÀÇ ÇÕÀº %dÀÔ´Ï´Ù.\n\n", hap);
 
-	printf("ì…ë ¥í•œ ì •ìˆ˜ì˜ ëª¨ë“  ì•½ìˆ˜ë¥¼ ì¶œë ¥\n");
+	printf("ÀÔ·ÂÇÑ Á¤¼öÀÇ ¸ğµç ¾à¼ö¸¦ Ãâ·Â\n");
 	int j=2, a, yaksu;
-	printf("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
+	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
 	scanf("%d", &a);
-	printf("ì•½ìˆ˜: 1");
+	printf("¾à¼ö: 1");
 	while (j <= a)
 	{
 		if (a % j == 0)
@@ -35,7 +35,7 @@ int main() {
 	}
 	printf("\n\n");
 
-	printf("\në°˜ë³µë£¨íŠ¸ë¥¼ ì´ìš©í•˜ì—¬ íŒ¨í„´ ì¶œë ¥\n");
+	printf("\n¹İº¹·çÆ®¸¦ ÀÌ¿ëÇÏ¿© ÆĞÅÏ Ãâ·Â\n");
 	int k = 1;
 	while (k<= 7)
 	{
@@ -57,14 +57,14 @@ int main() {
 	printf("\n\n");
 
 
-	printf("(ëœë¤)ìœ³ë†€ì´\n");
+	printf("(·£´ı)Àµ³îÀÌ\n");
 	int aa, bb, cc, dd, sum=0;
 	srand(time(NULL));
-	aa = 1-((rand() % 10) / 6);	// í™•ë¥  ì ìš©
-	if (aa == 1)				// 0~9ê¹Œì§€ë¥¼ 6ìœ¼ë¡œ ë‚˜ëˆˆ ëª«
-		printf("x");			// 0~5ê¹Œì§€ëŠ” 0, 6~9ê¹Œì§€ëŠ” 1 ì´ë¯€ë¡œ
-	else						// 1ì—ì„œ ê·¸ ê°’ì„ ë¹¼ì¤Œìœ¼ë¡œì„œ 1ì´ë‚˜ì˜¬ í™•ë¥  60%
-		printf("o");			// 0ì´ ë‚˜ì˜¬ í™•ë¥  40%ê°€ ë¨
+	aa = 1-((rand() % 10) / 6);	// È®·ü Àû¿ë
+	if (aa == 1)				// 0~9±îÁö¸¦ 6À¸·Î ³ª´« ¸ò
+		printf("x");			// 0~5±îÁö´Â 0, 6~9±îÁö´Â 1 ÀÌ¹Ç·Î
+	else						// 1¿¡¼­ ±× °ªÀ» »©ÁÜÀ¸·Î¼­ 1ÀÌ³ª¿Ã È®·ü 60%
+		printf("o");			// 0ÀÌ ³ª¿Ã È®·ü 40%°¡ µÊ
 	bb = rand() % 2;
 	if (bb == 1)
 		printf("x");
@@ -83,30 +83,30 @@ int main() {
 	sum = aa + bb + cc + dd;
 	switch (sum)
 	{
-		case 0:printf(":ìœ³"); break;
-		case 1:printf(":ê±¸"); break;
-		case 2:printf(":ê°œ"); break;
-		case 3:printf(":ë„"); break;
-		case 4:printf(":ëª¨"); break;
+		case 0:printf(":Àµ"); break;
+		case 1:printf(":°É"); break;
+		case 2:printf(":°³"); break;
+		case 3:printf(":µµ"); break;
+		case 4:printf(":¸ğ"); break;
 		default:
-			printf("ì˜¤ë¥˜\n");
+			printf("¿À·ù\n");
 			break;
 	}
 	printf("\n\n");
-	printf("ë³„(*) ì¶œë ¥\n");
+	printf("º°(*) Ãâ·Â\n");
 	int get_a;
-	printf("ì›í•˜ëŠ” ê°¯ìˆ˜ ì…ë ¥:");
+	printf("¿øÇÏ´Â °¹¼ö ÀÔ·Â:");
 	scanf("%d", &get_a);
-	for (int ii = 0; ii <= get_a; ii++) {
-		for (int jj = 0; jj <=get_a - ii; jj++) {
+	for (int ii = 0; ii < get_a; ii++) {
+		for (int jj = 0; jj <get_a - ii; jj++) {
 			printf("*");
 		}
 		printf("\n");
 	}
 	printf("\n\n");
-	printf("ì¤‘ì²© ë°˜ë³µë¬¸\n");
+	printf("ÁßÃ¸ ¹İº¹¹®\n");
 	int zero0, zero1, five;
-	printf("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
+	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
 	scanf("%d", &five);
 	for (zero0 = 1; zero0 <= five; zero0++)
 	{
@@ -118,7 +118,7 @@ int main() {
 	}
 	printf("\n\n");
 
-	printf("ê³„ì‚°ê¸° ë³€í˜•\n");
+	printf("°è»ê±â º¯Çü\n");
 	printf("*****************\n");
 	printf("a---- Add\n");
 	printf("s---- Subtract\n");
@@ -131,11 +131,11 @@ int main() {
 		int one, two;
 		char bee;
 		
-		printf("ì—°ì‚°ì„ ì…ë ¥í•˜ì‹œì˜¤:");
+		printf("¿¬»êÀ» ÀÔ·ÂÇÏ½Ã¿À:");
 		scanf(" %c", &bee);
 		if (bee == 'q')
 			break;
-		printf("ë‘ìˆ˜ë¥¼ ê³µë°±ìœ¼ë¡œ ë¶„ë¦¬í•˜ì—¬ ì…ë ¥í•˜ì‹œì˜¤:");
+		printf("µÎ¼ö¸¦ °ø¹éÀ¸·Î ºĞ¸®ÇÏ¿© ÀÔ·ÂÇÏ½Ã¿À:");
 		scanf(" %d %d", &one, &two);
 		switch (bee)
 		{
@@ -146,7 +146,7 @@ int main() {
 		}
 	}
 	printf("\n\n");
-	printf("2ì™€ 100ì‚¬ì´ì— ìˆëŠ” ëª¨ë“  ì†Œìˆ˜ ì¶œë ¥\n");
+	printf("2¿Í 100»çÀÌ¿¡ ÀÖ´Â ¸ğµç ¼Ò¼ö Ãâ·Â\n");
 	
 	for(int i = 2;i<100;i++)
 	{
@@ -163,7 +163,7 @@ int main() {
 	while (1)
 	{
 		int stick;
-		printf("ë§‰ëŒ€ì˜ ë†’ì´(ì¢…ë£Œ: -1): ");
+		printf("¸·´ëÀÇ ³ôÀÌ(Á¾·á: -1): ");
 		scanf("%d", &stick);
 		if (stick == -1)
 			break;
@@ -173,5 +173,75 @@ int main() {
 		}
 		printf("\n");
 	}
+	printf("\n\n");
+	printf("1~nÀÇ ÇÕÀÌ 10000ÀÌ ³ÑÁö ¾Ê´Â nÀÇ ÃÖ´ë°ª\n");
+	int number = 0, summ = 0;
+	while (summ<10000)
+	{
+		number++;
+		summ += number;
+	}
+	printf("1ºÎÅÍ %d±îÁöÀÇ ÇÕÀÌ %dÀÔ´Ï´Ù.\n",number-1,summ-number);
+
+	printf("\n\n");
+	printf("½Ç¼öÀÇ °Åµì Á¦°ö\n");
+	double zz, zz1;
+	int zegop;
+	printf("½Ç¼öÀÇ °ªÀ» ÀÔ·ÂÇÏ½Ã¿À:");
+	scanf("%lf", &zz);
+	zz1 = zz;
+	printf("°ÅµìÁ¦°öÈ½¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À:");
+	scanf(" %d", &zegop);
+	for (int cntt = 1; cntt < zegop; cntt++)
+	{
+		zz *= zz1;
+	}
+	printf("°á°ú°ªÀº %lf\n",zz);
+	printf("\n\n");
+	printf("n±îÁöÀÇ Á¦°öÀÇ ÇÕ ±¸ÇÏ±â\n");
+	int nn,ccnt=0;
+	printf("nÀÇ °ªÀ» ÀÔ·ÂÇÏ½Ã¿À: ");
+	scanf(" %d", &nn);
+	for (int i = 1; i <= nn; i++)
+	{
+		ccnt += i * i;
+	}
+	printf("°è»ê°ªÀº %dÀÔ´Ï´Ù\n",ccnt);
+	printf("\n\n");
+	printf("ÇÇº¸³ªÄ¡¼ö¿­\n");
+	int fib, an=1, bn=0, cn=1;
+	printf("¸î¹øÂ° Ç×±îÁö ±¸ÇÒ±î¿ä? ");
+	scanf("%d", &fib);
+	printf("0, 1");
+	for (int i = 2; i <= fib; i++)
+	{
+		cn = an + bn;
+		printf(", %d", cn);
+		bn = an;
+		an = cn;
+	}
+	printf("\n\n");
+	printf("¼ø¿­±¸ÇÏ±â\n");
+	int n2, r2, ncr=1;
+	printf("nÀÇ °ª: ");
+	scanf("%d", &n2);
+	printf("rÀÇ °ª: ");
+	scanf(" %d", &r2);
+	for (int i = n2; i >= (n2 - r2 + 1); i--)
+	{
+		ncr *= i;
+	}
+	printf("¼ø¿­ÀÇ °ªÀº %dÀÔ´Ï´Ù.\n",ncr);
+	printf("\n\n");
+	printf("ÀÚ¸®¼ö µÚÁı±â\n");
+	int jung, rev;
+	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+	scanf("%d", &jung);
+	do {
+		printf("%d", jung % (10));
+		jung = (jung - (jung % 10))/10;
+	} while (jung/10 != 0);
+	printf("%d", jung);
+	
 	return 0;
 }

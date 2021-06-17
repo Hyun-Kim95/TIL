@@ -7,5 +7,13 @@ C:\TIL\Cwork\Pro0616\exam.c(110,2): warning C4996: 'scanf': This function or var
 C:\TIL\Cwork\Pro0616\exam.c(135,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\TIL\Cwork\Pro0616\exam.c(139,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\TIL\Cwork\Pro0616\exam.c(167,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\TIL\Cwork\Pro0616\exam.c(191,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\TIL\Cwork\Pro0616\exam.c(194,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\TIL\Cwork\Pro0616\exam.c(204,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\TIL\Cwork\Pro0616\exam.c(214,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\TIL\Cwork\Pro0616\exam.c(227,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\TIL\Cwork\Pro0616\exam.c(229,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\TIL\Cwork\Pro0616\exam.c(239,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\TIL\Cwork\Pro0616\exam.c(237,12): warning C4101: 'rev' :참조되지 않은 지역 변수입니다.
 C:\TIL\Cwork\Pro0616\exam.c(26,14): warning C4101: 'yaksu' :참조되지 않은 지역 변수입니다.
   Pro0616.vcxproj -> C:\TIL\Cwork\Pro0616\Debug\Pro0616.exe
