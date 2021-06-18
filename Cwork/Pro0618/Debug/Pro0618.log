@@ -1,0 +1,9 @@
+﻿  Array.c
+C:\TIL\Cwork\Pro0618\Array.c(24,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int *'입니다.
+C:\TIL\Cwork\Pro0618\Array.c(24,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'int *'입니다.
+C:\TIL\Cwork\Pro0618\Array.c(25,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int *'입니다.
+C:\TIL\Cwork\Pro0618\Array.c(25,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'int *'입니다.
+C:\TIL\Cwork\Pro0618\Array.c(26,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int *'입니다.
+C:\TIL\Cwork\Pro0618\Array.c(26,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'int *'입니다.
+C:\TIL\Cwork\Pro0618\Array.c(32,12): warning C4013: 'time'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  Pro0618.vcxproj -> C:\TIL\Cwork\Pro0618\Debug\Pro0618.exe
