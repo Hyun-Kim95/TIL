@@ -60,7 +60,6 @@ void sin_degree() {
 	}
 }
 int b_rand() {
-	srand(time(NULL));
 	return rand() % 2;
 }
 double f_rand() {		// rand()는 0~32767 중에 무작위로 반환해 주는 함수라서
@@ -129,6 +128,41 @@ void f_equal() {
 	if (b < 0)
 		b *= -1;
 	B = (a > b) ? b : a;
+	if (A / B < 0.000001)
+		printf("두 개의 실수는 근사적으로 같음\n");
+	else
+		printf("두 개의 실수는 서로 다름\n");
+}
+void func_func() {
+	while (1) {
+		int a, b, c, result = 0;
+		char ch;
+		printf("=============================\n");
+		printf("MENU\n");
+		printf("=============================\n");
+		printf("1. 덧셈\n");
+		printf("2. 뺄셈\n");
+		printf("3. 곱셈\n");
+		printf("4. 나눗셈\n");
+		printf("5. 나머지\n");
+		printf("원하는 메뉴를 선택하시오(1~5): ");
+		scanf("%d", &a);
+		printf("숫자 2개를 입력하시오: ");
+		scanf("%d %d", &b, &c);
+		switch (a)
+		{
+		case 1: result = b + c; break;
+		case 2: result = b - c; break;
+		case 3: result = b * c; break;
+		case 4: result = b / c; break;
+		case 5: result = b % c; break;
+		}
+		printf("연산결과: %d\n", result);
+		printf("계속하려면 y를 누르시오: ");
+		scanf(" %c", &ch);
+		if (c != 'y')
+			break;
+	}
 }
 // main함수 시작
 int main() {
@@ -177,8 +211,9 @@ int main() {
 	sin_degree();
 
 	printf("\n무작위 1과 0\n");
+	srand(time(NULL));
 	for (int i = 0; i < 5; i++) {
-		printf("%d",b_rand());
+		printf("%d ",b_rand());
 	}
 	
 	printf("\n동전 앞뒤 맞추기\n");
@@ -228,5 +263,8 @@ int main() {
 
 	printf("\n두 실수가 근사적으로 같은지 확인\n");
 	f_equal();
+
+	printf("\n계산기\n");
+	func_func();
 	return 0;
 }
