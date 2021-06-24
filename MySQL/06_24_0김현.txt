@@ -1,0 +1,33 @@
+문제 1. employees 데이터베이스에서 departments 테이블의 dept_no 열과 dept_name 열을 복사하여
+          cookDB의 emp 테이블로 생성하는 SQL 문을 한 문장으로 작성하시오.
+         단, emp 테이블의 열 이름을 deptNo, deptName 으로 변경하시오.
+
+정답:
+use cookdb;
+CREATE TABLE emp (SELECT dept_no AS deptNo, dept_name AS deptName FROM employees.departments);
+
+문제 2. cookDB에 buyTBL에서 다음과 같이 출력을 해주세요.
+사용자 ID		총구매개수
+PSH		19
+LHJ		4
+KYM		1
+KJD		5
+KHD		6
+
+정답:
+SELECT userID AS '사용자 ID', SUM(amount) AS '총구매개수' FROM buyTBL GROUP BY userID ORDER BY userID DESC;
+
+문제 3. cookDB에 buyTBL에서 다음과 같이 평균 구매 개수가 2 이상인 사용자만
+         출력하도록 SQL문을 작성하시오.
+사용자ID		평균구매개수
+KJD		5.0000
+PSH		4.7500
+KHD		2.0000
+
+정답:
+SELECT userID AS '사용자ID', AVG(amount) AS '평균구매개수' FROM buyTBL GROUP BY userID HAVING AVG(amount) >= 2 ORDER BY AVG(amount) DESC;
+
+문제 4. 다음과 같이 출력하도록 구현하세요.(이미지 참고)
+
+정답:
+SELECT num, groupName, SUM(amount) AS '개수' FROM buyTBL GROUP BY groupName, num WITH ROLLUP;
