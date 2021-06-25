@@ -17,7 +17,7 @@ SELECT addr, ROW_NUMBER() OVER(PARTITION BY addr ORDER BY mDate ASC) "지역별 
 
 문제 6.
 userTBL에 가입일이 빠른순으로 정렬한 후 다른 사람과의 가입일자 차이를 알려주는 쿼리문 작성
-(DATEDIFF(날짜1,날짜2) 날짜1과 날짜2의 차이를 알려준다.)
+(DATEDIFF(날짜1,날짜2) 날짜1과 날짜2의 차이를 알려준다.(날짜1-날짜2))
 userName	addr	가입일		다음 사람과의 가입 일자 차이
 이경규		경남	2004-12-12		478
 이휘재		경기	2006-04-04		459
@@ -31,7 +31,7 @@ userName	addr	가입일		다음 사람과의 가입 일자 차이
 남희석		충남	2017-04-04		null
 
 정답:
-SELECT userName, addr, mDate AS "가입일",(LEAD(mDate,1,0) OVER (ORDER BY mDate ASC)) AS "다음 사람과의 가입 일자 차이" FROM userTBL;
+SELECT userName, addr, mDate AS "가입일",(DATEDIFF(LEAD(mDate,1,0) OVER(ORDER BY mDate),LEAD(mDate,0,0) OVER (ORDER BY mDate))) AS "다음 사람과의 가입 일자 차이" FROM userTBL;
 
 문제 7.
 pivotTest을 아래와 같이 피벗 테이블이 되도록 쿼리문을 작성하시오
