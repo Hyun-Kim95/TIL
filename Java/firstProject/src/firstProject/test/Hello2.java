@@ -3,7 +3,6 @@ package firstProject.test;
 public class Hello2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println("Hello2 main start");
 		// 기본 데이터 타입(+초기화)
 		boolean a = true;

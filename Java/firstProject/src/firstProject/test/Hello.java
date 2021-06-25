@@ -8,6 +8,12 @@ public class Hello {
 		// a= 20;	// 에러
 		double e = 1234E-4;	// 1234 * 10^-4 즉, 0.1234 와 같음
 		var price = 200;	// var 키워드를 사용하면 타입이 자동으로 결정됨
+		
+		long m = 25;
+		double d = 3.14 * 10;
+		
+		int n = 300;
+		byte b = (byte)n;
 	}
 
 }
