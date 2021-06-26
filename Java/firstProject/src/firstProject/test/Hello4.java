@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Hello4 {
 	public static void main(String[] args) {
-		//±¸±¸´Ü
-		//Á¶°Ç¹® 1°³ »ç¿ë
+		//êµ¬êµ¬ë‹¨
+		//ì¡°ê±´ë¬¸ 1ê°œ ì‚¬ìš©
 		int i = 2;
 		int j = 1;
 		while(i<=9) {
@@ -18,7 +18,7 @@ public class Hello4 {
 				System.out.println();
 			}
 		}
-		//Á¶°Ç¹® 2°³ »ç¿ë
+		//ì¡°ê±´ë¬¸ 2ê°œ ì‚¬ìš©
 		i = 2;
 		j = 1;
 		while(true) {
@@ -32,7 +32,7 @@ public class Hello4 {
 			}
 			if(i>9) break;
 		}
-		//Á¶°Ç¹® 0°³ »ç¿ë
+		//ì¡°ê±´ë¬¸ 0ê°œ ì‚¬ìš©
 		i = 2;
 		j = 1;
 		for(i=2;i<=9;) {
@@ -42,52 +42,53 @@ public class Hello4 {
 			j++;
 		}
 		
-		//a,b ¹Ù²Ù±â
+		//a,b ë°”ê¾¸ê¸°
 		int a =10;
 		int b =20;
 		int c = 0;
-		//Ã¹¹øÂ° ¹æ¹ı
+		//ì²«ë²ˆì§¸ ë°©ë²•
 		System.out.println("a:"+a+",b:"+b);
 		c = a;
 		a = b;
 		b = c;
 		System.out.println("a:"+a+",b:"+b);
-		//µÎ¹øÂ° ¹æ¹ı
+		//ë‘ë²ˆì§¸ ë°©ë²•
 		a = a + b;
 		b = a-b;
 		a = a - b;
 		System.out.println("a:"+a+",b:"+b);
 		
-		// °¡À§¹ÙÀ§º¸
+		// ê°€ìœ„ë°”ìœ„ë³´
 		Scanner scan = new Scanner(System.in);
-		System.out.println("0:°¡À§,1:¹ÙÀ§,2:º¸");
-		System.out.println("A¿ÍBÀÇ ¼ıÀÚ¸¦ ¶ç¾î¾²±â·Î ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("0:ê°€ìœ„,1:ë°”ìœ„,2:ë³´");
+		System.out.println("Aì™€Bì˜ ìˆ«ìë¥¼ ë„ì–´ì“°ê¸°ë¡œ ì…ë ¥í•˜ì„¸ìš”.");
 		int A = scan.nextInt();
 		int B = scan.nextInt();
-		//Ã¹¹øÂ° ¹æ¹ı
+		//ì²«ë²ˆì§¸ ë°©ë²•
 		if(A==B) {
-			System.out.println("ºñ°å½À´Ï´Ù");
+			System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤");
 		}else if((A==0&&B==1)||(A==1&&B==2)||(A==2&&B==0)) {
-			System.out.println("B°¡ ÀÌ°å½À´Ï´Ù.");
+			System.out.println("Bê°€ ì´ê²¼ìŠµë‹ˆë‹¤.");
 		}else {
-			System.out.println("A°¡ ÀÌ°å½À´Ï´Ù.");
+			System.out.println("Aê°€ ì´ê²¼ìŠµë‹ˆë‹¤.");
 		}
-		//µÎ¹øÂ° ¹æ¹ı
+		//ë‘ë²ˆì§¸ ë°©ë²•
 		if(A-B==0) {
-			System.out.println("ºñ°å½À´Ï´Ù");
+			System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤");
 		}else if(((B-A)==1)||(B-A==-2)) {
-			System.out.println("B°¡ ÀÌ°å½À´Ï´Ù.");
+			System.out.println("Bê°€ ì´ê²¼ìŠµë‹ˆë‹¤.");
 		}else {
-			System.out.println("A°¡ ÀÌ°å½À´Ï´Ù.");
+			System.out.println("Aê°€ ì´ê²¼ìŠµë‹ˆë‹¤.");
 		}
-		//ÃÖ´ë°ø¾à¼ö
+		//ìµœëŒ€ê³µì•½ìˆ˜
+		System.out.println("ìµœëŒ€ê³µì–‘ìˆ˜");
 		int number1 = scan.nextInt();
 		int number2 = scan.nextInt();
 		int chk = (number1>number2)?number2:number1;
-		//Ã¹¹øÂ° ¹æ¹ı
+		//ì²«ë²ˆì§¸ ë°©ë²•
 		while(true) {
 			if(number1 % chk == 0) {
-				if(number1%chk == 0) {
+				if(number2%chk == 0) {
 					System.out.println(chk);
 					break;
 				}
@@ -95,7 +96,7 @@ public class Hello4 {
 			}
 			chk -= 1;
 		}
-		//µÎ¹øÂ° ¹æ¹ı
+		//ë‘ë²ˆì§¸ ë°©ë²•
 		int yak = 2;
 		int count = 1;
 		int check = 0;
