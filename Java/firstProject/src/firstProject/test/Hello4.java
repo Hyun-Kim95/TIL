@@ -54,31 +54,36 @@ public class Hello4 {
 		System.out.println("a:"+a+",b:"+b);
 		//두번째 방법
 		a = a + b;
-		b = a-b;
+		b = a - b;
 		a = a - b;
 		System.out.println("a:"+a+",b:"+b);
 		
 		// 가위바위보
+		String game[] = {"가위","바위","보"};
 		Scanner scan = new Scanner(System.in);
 		System.out.println("0:가위,1:바위,2:보");
-		System.out.println("A와B의 숫자를 띄어쓰기로 입력하세요.");
+		System.out.println("숫자를 입력하세요.");
 		int A = scan.nextInt();
-		int B = scan.nextInt();
+		int B = (int)(Math.random()*3);
+		if(A>2||A<0)
+			System.out.println("가위바위보 하기 싫으세요?");
+		else
+			System.out.println("사람: "+game[A]+",컴퓨터: "+game[B]);
 		//첫번째 방법
 		if(A==B) {
 			System.out.println("비겼습니다");
 		}else if((A==0&&B==1)||(A==1&&B==2)||(A==2&&B==0)) {
-			System.out.println("B가 이겼습니다.");
+			System.out.println("컴퓨터가 이겼습니다.");
 		}else {
-			System.out.println("A가 이겼습니다.");
+			System.out.println("사용자가 이겼습니다.");
 		}
 		//두번째 방법
 		if(A-B==0) {
 			System.out.println("비겼습니다");
 		}else if(((B-A)==1)||(B-A==-2)) {
-			System.out.println("B가 이겼습니다.");
+			System.out.println("컴퓨터가 이겼습니다.");
 		}else {
-			System.out.println("A가 이겼습니다.");
+			System.out.println("사용자가 이겼습니다.");
 		}
 		//최대공약수
 		System.out.println("최대공양수");
