@@ -1,39 +1,39 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<Windows.h>		// Sleep ÇÔ¼ö ¾²·Á°í
+#include<Windows.h>		// Sleep í•¨ìˆ˜ ì“°ë ¤ê³ 
 
-// °è»ê±â ÇÔ¼öµé
+// ê³„ì‚°ê¸° í•¨ìˆ˜ë“¤
 void duhagy(int a,int b) {
 	static cntd = 1;
-	printf("µ¡¼ÀÀº ÃÑ %d¹ø ½ÇÇàµÇ¾ú½À´Ï´Ù.\n",cntd);
-	printf("¿¬»ê°á°ú: %d\n", a + b);
+	printf("ë§ì…ˆì€ ì´ %dë²ˆ ì‹¤í–‰ë˜ì—ˆìŠµë‹ˆë‹¤.\n",cntd);
+	printf("ì—°ì‚°ê²°ê³¼: %d\n", a + b);
 	cntd++;
 }
 void bbegy(int a, int b) {
 	static cntb = 1;
 	
-	printf("»¬¼ÀÀº ÃÑ %d¹ø ½ÇÇàµÇ¾ú½À´Ï´Ù.\n",cntb);
-	printf("¿¬»ê°á°ú: %d\n", a - b);
+	printf("ëº„ì…ˆì€ ì´ %dë²ˆ ì‹¤í–‰ë˜ì—ˆìŠµë‹ˆë‹¤.\n",cntb);
+	printf("ì—°ì‚°ê²°ê³¼: %d\n", a - b);
 	cntb++;
 }
 void gop(int a, int b) {
 	static cntg = 1;
-	printf("°ö¼ÀÀº ÃÑ %d¹ø ½ÇÇàµÇ¾ú½À´Ï´Ù.\n",cntg);
-	printf("¿¬»ê°á°ú: %d\n", a * b);
+	printf("ê³±ì…ˆì€ ì´ %dë²ˆ ì‹¤í–‰ë˜ì—ˆìŠµë‹ˆë‹¤.\n",cntg);
+	printf("ì—°ì‚°ê²°ê³¼: %d\n", a * b);
 	cntg++;
 }
 void nanugy(int a, int b) {
 	static cntn = 1;
-	printf("³ª´°¼ÀÀº ÃÑ %d¹ø ½ÇÇàµÇ¾ú½À´Ï´Ù.\n",cntn);
-	printf("¿¬»ê°á°ú: %d\n", a / b);
+	printf("ë‚˜ëˆ—ì…ˆì€ ì´ %dë²ˆ ì‹¤í–‰ë˜ì—ˆìŠµë‹ˆë‹¤.\n",cntn);
+	printf("ì—°ì‚°ê²°ê³¼: %d\n", a / b);
 	cntn++;
 }
-// ÁÖ»çÀ§ ³­¼ö ÇÔ¼ö
+// ì£¼ì‚¬ìœ„ ë‚œìˆ˜ í•¨ìˆ˜
 void get_dice_face() {
 	static int aa, bb, cc, dd, ee, ff;
 
 	for (int i = 0; i < 100; i++) {
-		Sleep(100);		// 0.1ÃÊ ½°
+		Sleep(50);		// 0.1ì´ˆ ì‰¼
 		int chek;
 		srand(time(NULL));
 		chek = rand() % 6;
@@ -53,44 +53,48 @@ void get_dice_face() {
 	printf("5->%d\n", ee);
 	printf("6->%d\n", ff);
 }
-// ·Î±×ÀÎ È®ÀÎ
+// ë¡œê·¸ì¸ í™•ì¸
 void psw_check() {
 	static int cnt = 1;
 	for (int i = 0; i < 3; i++) {
 		int psw;
-		printf("ºñ¹Ğ¹øÈ£: ");
+		printf("ë¹„ë°€ë²ˆí˜¸: ");
 		scanf("%d", &psw);
 		if (psw == 1234) {
-			printf("·Î±×ÀÎ ¼º°ø\n");
+			printf("ë¡œê·¸ì¸ ì„±ê³µ\n");
 			break;
 		}
 		else if(cnt==3){
-			printf("·Î±×ÀÎ ½ÃµµÈ½¼ö ÃÊ°ú\n");
+			printf("ë¡œê·¸ì¸ ì‹œë„íšŸìˆ˜ ì´ˆê³¼\n");
 		}
 		cnt++;
 	}
 }
+// ì´ˆê¸°í™”
 void get_random() {
 	static int rnd;
 	if (rnd == 0) {
-		printf("ÃÊ±âÈ­ ½ÇÇà\n");
+		printf("ì´ˆê¸°í™” ì‹¤í–‰\n");
 		srand(time(NULL));
 	}
 	rnd = rand();
 	printf("%d\n", rnd);
 }
+// ê° ìë¦¬ìˆ˜ì˜ í•©
 int sum(int a) {
 	if (a == 1)
 		return 1;
 	else
 		return a + sum(a - 1);
 }
+// ì œê³±
 int power(int base, int raised) {
 	if (raised == 1)
 		return base;
 	else
 		return base * power(base, raised-1);
 }
+// ìë¦¬ìˆ˜ ë³„ë¡œ ë‚˜ëˆ„ê¸°
 void show_digit(int x) {
 	if (x / 10 >= 10)
 		show_digit(x / 10);
@@ -98,6 +102,7 @@ void show_digit(int x) {
 		printf("%d ", x / 10);
 	printf("%d ",x % 10);
 }
+// ìë¦¬ìˆ˜ì˜ ê°œìˆ˜
 int numbernum(int a) {
 	static int cnt=1;
 	if (a / 10 > 0) {
@@ -106,6 +111,7 @@ int numbernum(int a) {
 	}
 	return cnt;
 }
+// ê° ìë¦¬ìˆ˜ì˜ í•©
 int numbersum(int a) {
 	static int cnt = 0;
 	if (a / 10 > 0) {
@@ -116,20 +122,36 @@ int numbersum(int a) {
 		cnt += a;
 	return cnt;
 }
-int susic(double a) {
-	static double cnt = 1;
-	if (a >= 2) {
-		cnt += 1 / a;
+// ìˆ˜ì‹
+double susic(double a) {
+	static double cnt=0;
+	if (a > 1)
 		susic(a - 1);
-	}
+	cnt += 1.0 / a;
 	return cnt;
 }
+// ì´í•­ê³„ìˆ˜
+int recusive(int a, int b) {
+	static int cnt = 0;
+	if ((b == 0) || (b == a))
+		return 1;
+	else
+		return recusive(a - 1, b - 1) + recusive(a - 1, b);
+}
+// í”¼ë³´ë‚˜ì¹˜
+int fib(int a) {
+	if (a == 0)
+		return 0;
+	else if (a == 1)
+		return 1;
+	return fib(a - 2) + fib(a - 1);
+}
 int main() {
-	printf("°è»ê±â\n\n");
+	printf("ê³„ì‚°ê¸°\n\n");
 	while (1) {
 		int a, b;
 		char c,chek;
-		printf("¿¬»êÀ» ÀÔ·ÂÇÏ½Ã¿À: ");
+		printf("ì—°ì‚°ì„ ì…ë ¥í•˜ì‹œì˜¤: ");
 		scanf("%d%c%d", &a, &c, &b);
 		switch (c) {
 		case('+'): duhagy(a, b); break;
@@ -137,49 +159,61 @@ int main() {
 		case('*'): gop(a, b); break;
 		case('/'): nanugy(a, b); break;
 		}
-		printf("°è¼ÓÇÏ½Ã°Ú½À´Ï±î?(Á¾·á:n)");
+		printf("ê³„ì†í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(ì¢…ë£Œ:n)");
 		scanf(" %c", &chek);
 		if (chek == 'n')
 			break;
 	}
-	printf("\nÁÖ»çÀ§ ³­¼ö\n");
+	printf("\nì£¼ì‚¬ìœ„ ë‚œìˆ˜\n");
 	get_dice_face();
-	printf("\nºñ¹Ğ¹øÈ£°Ë»ç\n");
+	printf("\në¹„ë°€ë²ˆí˜¸ê²€ì‚¬\n");
 	psw_check();
-	printf("\n³­¼ö ÃÊ±âÈ­\n");
+	printf("\në‚œìˆ˜ ì´ˆê¸°í™”\n");
 	for (int i = 0; i < 3; i++)
 		get_random();
-	printf("\n1~n±îÁöÀÇ ÇÕ\n");
+	printf("\n1~nê¹Œì§€ì˜ í•©\n");
 	int n;
-	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À:");
+	printf("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤:");
 	scanf("%d", &n);
-	printf("1ºÎÅÍ %d±îÁöÀÇ ÇÕ=%d\n",n,sum(n));
-	printf("\nÁö¼ö°ª °è»ê\n");
+	printf("1ë¶€í„° %dê¹Œì§€ì˜ í•©=%d\n",n,sum(n));
+	printf("\nì§€ìˆ˜ê°’ ê³„ì‚°\n");
 	int base, raised;
-	printf("¹Ø¼ö: ");
+	printf("ë°‘ìˆ˜: ");
 	scanf("%d", &base);
-	printf("Áö¼ö: ");
+	printf("ì§€ìˆ˜: ");
 	scanf("%d", &raised);
 	printf("%d^%d=%d",base,raised,power(base, raised));
-	printf("\nÁ¤¼öÀÇ °¢ ÀÚ¸®¼ö\n");
+	printf("\nì •ìˆ˜ì˜ ê° ìë¦¬ìˆ˜\n");
 	int number;
-	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 	scanf("%d", &number);
 	show_digit(number);
-	printf("\nÁ¤¼öÀÇ ÀÚ¸®¼ö¸ÂÃß±â\n");
+	printf("\nì •ìˆ˜ì˜ ìë¦¬ìˆ˜ë§ì¶”ê¸°\n");
 	int abc;
-	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 	scanf("%d", &abc);
-	printf("ÀÚ¸®¼öÀÇ °³¼ö: %d\n",numbernum(abc));
-	printf("\n°¢ ÀÚ¸®¼öÀÇ ÇÕ°è\n");
+	printf("ìë¦¬ìˆ˜ì˜ ê°œìˆ˜: %d\n",numbernum(abc));
+	printf("\nê° ìë¦¬ìˆ˜ì˜ í•©ê³„\n");
 	int abcd;
-	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 	scanf("%d", &abcd);
-	printf("ÀÚ¸®¼öÀÇ ÇÕ: %d", numbersum(abcd));
-	printf("\n¼ö½ÄÀÇ °ª\n");
+	printf("ìë¦¬ìˆ˜ì˜ í•©: %d", numbersum(abcd));
+	printf("\nìˆ˜ì‹ì˜ ê°’\n");
 	double abb;
-	printf("nÀ» ÀÔ·Â:");
+	printf("nì„ ì…ë ¥:");
 	scanf("%lf", &abb);
-	printf("%d", susic(abb));
+	printf("%lf", susic(abb));
+	printf("\nì´í•­ê³„ìˆ˜\n");
+	int nnn, kkk;
+	printf("n=");
+	scanf("%d", &nnn);
+	printf("k=");
+	scanf("%d", &kkk);
+	printf("%d\n",recusive(nnn, kkk));
+	printf("\ní”¼ë³´ë‚˜ì¹˜\n");
+	int fi = 0;
+	scanf("%d", &fi);
+	for(int i=0;i<=fi;i++)
+		printf("fib(%d) = %d\n",i,fib(i));
 	return 0;
 }
