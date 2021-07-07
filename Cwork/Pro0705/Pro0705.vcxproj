@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Exam.c" />
     <ClCompile Include="Exam1.c" />
+    <ClCompile Include="PointerExam.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

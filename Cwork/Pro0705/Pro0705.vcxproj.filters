@@ -21,5 +21,8 @@
     <ClCompile Include="Exam1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="PointerExam.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

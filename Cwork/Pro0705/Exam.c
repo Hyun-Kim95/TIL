@@ -59,7 +59,7 @@ void transpose(int a[3][3]) {
 	}
 	printf("\n");
 }
-int main() {
+int main1() {
 	/*printf("1번 문제\n");
 	int day[] = { 31,29,31,30,31,30,31,31,30,31,30,31 };
 	int len = sizeof(day) / sizeof(day[0]);
@@ -297,17 +297,18 @@ int main() {
 	char key;
 	int xx = 0, yy = 0;	// 유저위치
 	int xxx1=9, xxx2=8, yyy1=8, yyy2=9;	// 몬스터 위치
-	int exit = 0;	// 종료시 1
+	int exit = 0;	// 종료확인
 
-	map[9][9] = 3;	// 골드
 	map[xxx1][yyy1] = 2;	// 몬스터
 	map[xxx2][yyy2] = 2;	// 몬스터
 	while (1)
 	{
+		printf("\n16번 문제(금찾기 게임)\n");
 		map[xx][yy] = 1;	// 유저
-		if (exit == 1)
+		if (exit != 0)
 			break;
-		for (int i = 0; i < 10; i++) {
+		map[9][9] = 3;	// 골드
+		for (int i = 0; i < 10; i++) {	// 화면 출력
 			for (int j = 0; j < 10; j++) {
 				if (map[i][j] == 0)
 					printf(".");
@@ -320,74 +321,160 @@ int main() {
 			}
 			printf("\n");
 		}
-		while (1) {
+		while (1) {		// 몬스터1 움직임
 			int cc = 0;
 			int kk = rand() % 8;
 			switch (kk) {
-			case 0: map[xxx1][yyy1] = 0; xxx1--;
-				if (xxx1 < 0)
-					xxx1++;
-				else
-					cc = 1;
-				break;
-			case 1: map[xxx1][yyy1] = 0; xxx1--; yyy1++;
-				if (xxx1 < 0) {
-					xxx1++;
-					yyy1--;
-				}
-				else
-					cc = 1;
-				break;
-			case 2: map[xxx1][yyy1] = 0; yyy1++;
-				if (yyy1>9) {
-					yyy1--;
-				}
-				else
-					cc = 1;
-				break;
-			case 3: map[xxx1][yyy1] = 0; xxx1++; yyy1++;
-				if (xxx1 > 9 || yyy1 > 9) {
+			case 0: 
+				if (xxx1 - 1 >= 0 && (xxx1 - 1 != xxx2 || yyy1 != yyy2))
+				{
+					map[xxx1][yyy1] = 0;
 					xxx1--;
-					yyy1--;
+					cc = 1;
 				}
-				else
-					cc = 1;
 				break;
-			case 4: map[xxx1][yyy1] = 0; xxx1++;
-				if (xxx1 > 9)
-					xxx1--;
-				else
-					cc = 1;
-				break;
-			case 5: map[xxx1][yyy1] = 0; xxx1++; yyy1--;
-				if (xxx1 > 9 || yyy1 < 0) {
+			case 1: 
+				if (xxx1 - 1 >= 0 && (xxx1 - 1 != xxx2 || yyy1+1 != yyy2)
+					&& yyy1 + 1 <= 9)
+				{
+					map[xxx1][yyy1] = 0;
 					xxx1--;
 					yyy1++;
+					cc = 1;
 				}
-				else
-					cc = 1;
 				break;
-			case 6: map[xxx1][yyy1] = 0; yyy1--;
-				if (yyy1 < 0)
+			case 2: 
+				if ((xxx1 != xxx2 || yyy1+1 != yyy2) && ((yyy1 + 1 < 9) || (xxx1 < 9))) {
+					map[xxx1][yyy1] = 0;
 					yyy1++;
-				else
 					cc = 1;
+				}
 				break;
-			case 7: map[xxx1][yyy1] = 0; xxx1--; yyy1--;
-				if (xxx1 < 0 || yyy1 < 0) {
+			case 3:
+				if (xxx1 +1 <= 9 && (xxx1 + 1 != xxx2 || yyy1 + 1 != yyy2)
+					&& yyy1 + 1 <= 9 && (xxx1+1)*(yyy1+1)<81) {
+					map[xxx1][yyy1] = 0;
 					xxx1++;
 					yyy1++;
-				}
-				else
 					cc = 1;
+				}
+				break;
+			case 4:
+				if ((xxx1+1 != xxx2 || yyy1 != yyy2) && xxx1 + 1 <= 9) {
+					map[xxx1][yyy1] = 0;
+					xxx1++;
+					cc = 1;
+				}
+				break;
+			case 5:
+				if (xxx1 + 1 <= 9 && (xxx1 + 1 != xxx2 || yyy1 - 1 != yyy2)
+					&& yyy1 - 1 >= 0) {
+					map[xxx1][yyy1] = 0;
+					xxx1++;
+					yyy1--;
+					cc = 1;
+				}
+				break;
+			case 6:
+				if ((xxx1 != xxx2 || yyy1-1 != yyy2) && yyy1 - 1 >= 0) {
+					map[xxx1][yyy1] = 0;
+					yyy1--;
+					cc = 1;
+				}
+				break;
+			case 7:
+				if (xxx1 - 1 >= 0 && (xxx1 - 1 != xxx2 || yyy1 - 1 != yyy2)
+					&& yyy1 - 1 >= 0) {
+					map[xxx1][yyy1] = 0;
+					xxx1--;
+					yyy1--;
+					cc = 1;
+				}	
 				break;
 			}
-			if (cc == 1)
+			if (cc == 1) {
 				map[xxx1][yyy1] = 2;
 				break;
+			}
+		}
+		while (1) {		// 몬스터2 움직임
+			int cc = 0;
+			int kk = rand() % 8;
+			switch (kk) {
+			case 0:
+				if (xxx2 - 1 >= 0 && (xxx2 - 1 != xxx1 || yyy2 != yyy1))
+				{
+					map[xxx2][yyy2] = 0;
+					xxx2--;
+					cc = 1;
+				}
+				break;
+			case 1:
+				if (xxx2 - 1 >= 0 && (xxx2 - 1 != xxx1 || yyy2 + 1 != yyy1)
+					&& yyy2 + 1 <= 9)
+				{
+					map[xxx2][yyy2] = 0;
+					xxx2--;
+					yyy2++;
+					cc = 1;
+				}
+				break;
+			case 2:
+				if ((xxx2 != xxx1 || yyy2 + 1 != yyy1) && yyy2 + 1 <= 9) {
+					map[xxx2][yyy2] = 0;
+					yyy2++;
+					cc = 1;
+				}
+				break;
+			case 3:
+				if (xxx2 + 1 <= 9 && (xxx2 + 1 != xxx1 || yyy2 + 1 != yyy1)
+					&& yyy2 + 1 <= 9 && (xxx2 + 1) * (yyy2 + 1) < 81) {
+					map[xxx2][yyy2] = 0;
+					xxx2++;
+					yyy2++;
+					cc = 1;
+				}
+				break;
+			case 4:
+				if ((xxx2 + 1 != xxx1 || yyy2 != yyy1) && xxx2 + 1 <= 9) {
+					map[xxx2][yyy2] = 0;
+					xxx2++;
+					cc = 1;
+				}
+				break;
+			case 5:
+				if (xxx2 + 1 <= 9 && (xxx2 + 1 != xxx1 || yyy2 - 1 != yyy1)
+					&& yyy2 - 1 >= 0) {
+					map[xxx2][yyy2] = 0;
+					xxx2++;
+					yyy2--;
+					cc = 1;
+				}
+				break;
+			case 6:
+				if ((xxx2 != xxx1 || yyy2 - 1 != yyy1) && yyy2 - 1 >= 0) {
+					map[xxx2][yyy2] = 0;
+					yyy2--;
+					cc = 1;
+				}
+				break;
+			case 7:
+				if (xxx2 - 1 >= 0 && (xxx2 - 1 != xxx1 || yyy2 - 1 != yyy1)
+					&& yyy2 - 1 >= 0) {
+					map[xxx2][yyy2] = 0;
+					xxx2--;
+					yyy2--;
+					cc = 1;
+				}
+				break;
+			}
+			if (cc == 1) {
+				map[xxx2][yyy2] = 2;
+				break;
+			}
 		}
 		scanf(" %c", &key);
-		switch (key) {
+		switch (key) {	// 유저 이동
 		case 'w': map[xx][yy] = 0; xx--;
 			if (xx < 0) {
 				xx++;
@@ -396,8 +483,10 @@ int main() {
 				printf("gameover\n");
 				exit = 1;
 			}
-			else if (xx == 9 && yy == 9)
+			else if (xx == 9 && yy == 9) {
 				printf("Win\n");
+				exit = 2;
+			}
 			break;
 		case 's': map[xx][yy] = 0; xx++;
 			if (xx > 9) {
@@ -407,8 +496,10 @@ int main() {
 				printf("gameover\n");
 				exit = 1;
 			}
-			else if (xx == 9 && yy == 9)
+			else if (xx == 9 && yy == 9) {
 				printf("Win\n");
+				exit = 2;
+			}
 			break;
 		case 'a': map[xx][yy] = 0; yy--;
 			if (yy < 0) {
@@ -418,8 +509,10 @@ int main() {
 				printf("gameover\n");
 				exit = 1;
 			}
-			else if (xx == 9 && yy == 9)
+			else if (xx == 9 && yy == 9) {
 				printf("Win\n");
+				exit = 2;
+			}
 			break;
 		case 'd': map[xx][yy] = 0; yy++;
 			if (yy > 9) {
@@ -429,11 +522,15 @@ int main() {
 				printf("gameover\n");
 				exit = 1;
 			}
-			else if (xx == 9 && yy == 9)
+			else if (xx == 9 && yy == 9) {
 				printf("Win\n");
+				exit = 2;
+			}
 			break;
 		}
-
+		if (exit != 0)
+			_sleep(2000);
+		system("cls");	// 화면 지우기
 	}
 	return 0;
 }
