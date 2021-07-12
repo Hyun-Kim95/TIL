@@ -1,0 +1,6 @@
+﻿  0712.c
+C:\Hyun_Folder\TIL\Cwork\Pro0712\Pro0712\0712.c(20,10): warning C4129: 'c': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+C:\Hyun_Folder\TIL\Cwork\Pro0712\Pro0712\0712.c(35,12): warning C4013: 'time'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Hyun_Folder\TIL\Cwork\Pro0712\Pro0712\0712.c(24,10): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Hyun_Folder\TIL\Cwork\Pro0712\Pro0712\0712.c(29,11): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Pro0712.vcxproj -> C:\Hyun_Folder\TIL\Cwork\Pro0712\Debug\Pro0712.exe
