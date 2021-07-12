@@ -1,12 +1,9 @@
 import java.util.Random;
 import java.util.Scanner;
 
-
-
 public class FishGame {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		Random r = new Random();
 		Scanner sc = new Scanner(System.in);
@@ -17,9 +14,7 @@ public class FishGame {
 			int b = r.nextInt(5);
 
 			if(hosu[a][b] == 1)
-			{
 				i--;
-			}
 			else
 			{
 				hosu[a][b] = 1;
@@ -36,9 +31,7 @@ public class FishGame {
 			y = sc.nextInt();
 			x = sc.nextInt();
 			if(!(x > 4 || x < 0 || y >4 || y<0))
-			{
 				break;
-			}
 		}
 		//캐스팅
 		
@@ -102,12 +95,8 @@ public class FishGame {
 					}
 				}
 				else
-				{
 					System.out.println("잘못된 입력입니다.");
-				}
-			}
-				
+			}			
 		}
 	}
-
 }
