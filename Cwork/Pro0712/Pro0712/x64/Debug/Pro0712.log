@@ -1,21 +1,6 @@
 ﻿  Exam.c
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(32,9): warning C4013: 'tolower'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(51,14): warning C4013: 'isspace'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(77,26): warning C4013: 'toupper'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(105,22): warning C4047: '!=': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(107,28): warning C4047: '=': 'char'의 간접 참조 수준이 'char *'과(와) 다릅니다.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(120,13): warning C4013: 'isLower'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(42,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(48,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(52,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(59,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(65,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(73,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(87,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(101,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(103,2): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(107,11): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(110,2): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(119,3): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-Exam.obj : error LNK2019: isLowermain 함수에서 참조되는 확인할 수 없는 외부 기호
-C:\TIL\Cwork\Pro0712\x64\Debug\Pro0712.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.
+C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(33,16): warning C4047: '함수': 'int'의 간접 참조 수준이 'char *'과(와) 다릅니다.
+C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(33,10): warning C4024: 'tolower': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(243,9): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\TIL\Cwork\Pro0712\Pro0712\Exam.c(245,3): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Pro0712.vcxproj -> C:\TIL\Cwork\Pro0712\x64\Debug\Pro0712.exe
