@@ -1,0 +1,1211 @@
+51번문제
+
+#병합 정렬
+def 병합정렬(입력리스트):
+    입력리스트길이 = len(입력리스트)
+    if 입력리스트길이 <= 1:
+        return 입력리스트
+    중간값 = 입력리스트길이 // 2
+    그룹_하나 = 병합정렬(입력리스트[:중간값])
+    그룹_둘 = 병합정렬(입력리스트[중간값:])
+    결과값 = []
+
+    while 그룹_하나 and 그룹_둘:
+        if 그룹_하나[0] < 그룹_둘[0]:
+            결과값.append(그룹_하나.pop(0))
+        else:
+            결과값.append(그룹_둘.pop(0))
+
+    while 그룹_하나:
+        결과값.append(그룹_하나.pop(0))
+    while 그룹_둘:
+        결과값.append(그룹_둘.pop(0))
+    return 결과값
+
+주어진리스트 = input().split(' ')
+주어진리스트 = [int(i) for i in 주어진리스트]
+
+print(병합정렬(주어진리스트))
+
+
+
+52번문제
+
+def 퀵정렬(입력리스트):
+    입력리스트의길이 = len(입력리스트)
+    if 입력리스트의길이 <= 1:
+        return 입력리스트
+    기준값 = 입력리스트.pop(입력리스트의길이//2)
+    그룹_하나 = []
+    그룹_둘 = []
+    
+    for i in range(입력리스트의길이-1):
+        if 입력리스트[i] < 기준값:
+            그룹_하나.append(입력리스트[i])
+        else:
+            그룹_둘.append(입력리스트[i])
+    return 퀵정렬(그룹_하나) + [기준값] + 퀵정렬(그룹_둘)
+
+주어진리스트 = input().split(' ')
+주어진리스트 = [int(i) for i in 주어진리스트]
+
+print(퀵정렬(주어진리스트))
+
+
+
+53번문제
+def math(e):
+    if e.count('(') != e.count(')'):
+        return False
+    괄호 = []
+    for i in e:
+        if i == '(':
+            괄호.append('(')
+        if i == ')':
+            if len(괄호) == 0:
+                return False
+            괄호.pop()
+    return True
+
+n = input()
+if math(n) == True:
+	print("YES")
+else:
+	print("NO")
+
+54번문제
+user_input = input().split(' ')
+user_input = [int(i) for i in user_input]
+
+def sol(l):
+    l = sorted(l)
+    for i in range(len(l) - 1):
+        if l[i]+1 != l[i+1]:
+            return 'NO'
+    return 'YES'
+
+print(sol(user_input))
+
+55번문제
+원판의이동경로 = []
+def 하노이(원반의수, 시작기둥, 목표기둥, 보조기둥):
+    #원판이 한개일 때에는 옮기면 됩니다.
+    if 원반의수 == 1:
+        원판의이동경로.append([시작기둥, 목표기둥]) 
+        return None
+
+    #원반의 n-1개를 경유기둥으로 옮기고
+    하노이(원반의수-1, 시작기둥, 보조기둥, 목표기둥)
+    #가장 큰 원반은 목표기둥으로
+    원판의이동경로.append([시작기둥, 목표기둥]) 
+    #경유기둥과 시작기둥을 바꿉니다!
+    하노이(원반의수-1, 보조기둥, 목표기둥, 시작기둥)
+
+하노이(3,'A','C','B')
+print(원판의이동경로)
+print(len(원판의이동경로))
+
+56번문제
+nationWidth = {
+	'korea': 220877, 
+	'Rusia': 17098242, 
+	'China': 9596961, 
+	'France': 543965, 
+	'Japan': 377915,
+	'England' : 242900,
+}
+
+w = nationWidth['korea']
+nationWidth.pop('korea')
+l = list(nationWidth.items())
+gap = max(nationWidth.values())
+item = 0
+
+for i in l:
+    if gap > abs(i[1] - w):
+        gap = abs(i[1] - w)
+        item = i
+print(item[0],item[1]-220877)
+
+57번문제
+def count(n):
+	countN = str(list(range(n+1))).count('1')
+	return countN
+
+print(count(1000))
+
+58번문제
+n = int(input())
+
+result = format(n, ',')
+print(result)
+
+
+59번문제
+user_input = input()
+print("{0:=^50}".format(user_input))
+
+
+60번문제
+students = sorted(students)
+
+for number, name in enumerate(students):
+    print("번호: {}, 이름: {}".format(number+1, name))
+
+61번문제
+#답1
+user_input = input()
+s = ''
+storeString = user_input[0]
+count = 0
+for i in user_input:
+    if i == storeString:
+        count += 1
+    else:
+        s += str(count) + storeString
+        storeString = i
+        count = 1
+s += str(count) + storeString
+print(s)
+
+#답2 - 이해를 돕기 위한 예제
+
+import re
+
+input_data = 'aaabbccccccasss'
+rule = re.compile('[a-c]+')
+
+one = re.findall('b', input_data)
+two = re.findall(rule, input_data)
+three = re.findall('(\\w)(\\1*)', input_data)
+
+print(one)
+print(two)
+print(three)
+
+#답2 - 풀이
+
+import re
+
+input_data = 'aaabbccccccasss'
+rule = re.compile('[a-c]+')
+
+one = re.findall('b', input_data)
+two = re.findall(rule, input_data)
+three = re.findall('(\\w)(\\1*)', input_data)
+
+print(one)
+print(two)
+print(three)
+
+s = ''
+for i, j in three:
+    s += str(len(j)+1)+i
+print(s)
+
+62번문제
+string='aacddddddddd'
+a=string.count('a') #2
+b=string.count('b') #0
+c=string.count('c') #1
+d=string.count('d') #9
+print(int(str(a)+str(b)+str(c)+str(d)+str(b)+str(d)+str(a)+str(a+1)))
+
+63번문제
+user_input = input().split(' ')
+#print(user_input)
+result = ''
+
+for s in user_input:
+    result += s[0]
+
+print(result)
+
+64번문제
+#64번 이상한 엘리베이터
+N = int(input())
+result = 0
+
+while True:
+    if N%7 ==0:
+        result += N//7
+        print(result)
+        break
+    N -= 3
+    result += 1
+    if N < 0:
+        print(-1)
+        break
+
+65번문제
+a = input().split(' ')
+b = input().split(' ')
+
+c = []
+count = 0
+
+for i, j in zip(a, b):
+	if count % 2 == 0:
+		c.append([i, j])
+	else:
+		c.append([j, i])
+	count += 1
+
+print(c)
+
+# [[1,'a'],['b',2],[3,'c'],['d',4]]
+
+66번문제
+def solution(전체블록, 규칙):
+    answer = []
+    for 부분블록 in 전체블록:
+        answer.append(블록순서체크(부분블록, 규칙))
+    return answer
+
+def 블록순서체크(부분블록, 규칙):
+    임시변수 = 규칙.index(규칙[0])
+    for 문자 in 부분블록:
+        if 문자 in 규칙:
+            if 임시변수 > 규칙.index(문자):
+                return '불가능'
+            임시변수 = 규칙.index(문자)
+    return '가능'
+
+전체블록 = ['ABCDEF', 'BCAD', 'ADEFQRX', 'BEDFG', 'AEBFDGCH']
+규칙 = 'ABCD'
+
+print(solution(전체블록, 규칙))
+
+67번문제
+def solution(n):
+    people = 0
+    total = 0
+    while(True):
+        total = people*(people-1)/2
+        if n<total:
+            break
+        people+=1
+    times = int(people-(total-n)-1)
+    return [times,people]
+
+
+
+68번문제
+def sol(tb, rt):
+    answer = []
+    rt = rt.split(':')
+    for i in range(len(tb)):
+        time = tb[i].split(':')
+        time_to_min = ((int(time[0])*60 + int(time[1])) - (int(rt[0])*60+int(rt[1])))
+        if time_to_min < 0:
+            answer.append("지나갔습니다")
+        else:
+            a = (time_to_min) // 60
+            b = (time_to_min) % 60
+            answer.append(str(a).zfill(2)+'시간 '+str(b).zfill(2)+'분')
+    return answer
+
+sol(["12:30", "13:20", "14:13"], "12:40")
+
+69번문제
+#골드바흐의 추측
+def cal():
+    n=10000*2
+    primes=[]    
+    a = [False,False] + [True]*(n-1)
+
+    for i in range(2,n+1):
+      if a[i]:
+        primes.append(i)
+        for j in range(2*i, n+1, i):
+            a[j] = False
+            
+    return primes
+
+
+a = cal()
+
+#골드바흐파티션
+n = int(input())
+l = []
+k = []	
+
+for i in range(2, n//2+1):    
+    if i in a and n-i in a:
+        l.append(i)
+        l.append(n-i)
+
+for i in range(0,len(l)-1,2):
+    k.append(l[i+1]-l[i])
+    
+index = k.index(min(k))*2
+print(l[index], l[index+1])
+
+
+70번문제
+# 해당 함수를 완성해주세요
+def sol(a, b):
+    c = []
+    if len(a) == len(b[0]):
+        for i in range(len(a)):
+            c.append([0]*len(b[0]))
+        for i in range(len(c)):
+            for j in range(len(c[i])):
+                for k in range(len(a[i])):
+                    c[i][j] += a[i][k] * b[k][j]
+        return c
+    else:
+        return -1
+
+71번문제
+graph = {
+        'A': set(['B', 'C', 'E']),
+        'B': set(['A']),
+        'C': set(['A']),
+        'D': set(['E', 'F']),
+        'E': set(['A', 'D']),
+        'F': set(['D'])
+}
+
+def dfs(graph, start):
+    visited = []
+    stack = [start]
+
+    while stack:
+        n = stack.pop()
+        if n not in visited:
+            visited.append(n)
+            stack += graph[n] - set(visited)
+    return visited
+
+print(dfs(graph, 'E'))
+
+#tree 풀이
+
+tree = {
+        'A': ['B', 'C', 'E'],
+        'B': ['A'],
+        'C': ['A'],
+        'D': ['E', 'F'],
+        'E': ['A', 'D'],
+        'F': ['D']
+}
+
+def dfs(data, start):
+    visited = []
+    stack = [start]
+
+    pass
+
+    return visited
+
+print(dfs(tree, 'E'))
+
+
+72번문제
+graph = {
+        'A': set(['B', 'C', 'E']),
+        'B': set(['A']),
+        'C': set(['A']),
+        'D': set(['E', 'F']),
+        'E': set(['A', 'D']),
+        'F': set(['D'])
+}
+
+def bfs(graph, start):
+    visited = []
+    queue = [start]
+
+    while queue:
+        n = queue.pop(0)
+        if n not in visited:
+            visited.append(n)
+            queue += graph[n] - set(visited)
+    return visited
+
+print(bfs(graph, 'E'))
+
+73번문제
+graph = {'A': set(['B', 'C']),
+         'B': set(['A', 'D', 'E']),
+         'C': set(['A', 'F']),
+         'D': set(['B']),
+         'E': set(['B', 'F']),
+         'F': set(['C', 'E'])}
+
+start, end = [i for i in input().split()]
+    
+queue = [start]
+visited = [start]
+    
+def solution():
+    count = -1
+
+    while len(queue)!=0:
+        count += 1
+        size = len(queue)
+
+        for i in range(size):
+            node = queue.pop(0)
+            if node == end:
+                return count
+
+            for next_node in graph[node]:
+                if next_node not in visited:
+                    visited.append(next_node)
+                    queue.append(next_node)
+
+print(solution())
+
+74번문제
+graph = {1: [2, 3, 4],
+				 2: [1, 3, 4, 5, 6],
+				 3: [1, 2, 7],
+				 4: [1, 2, 5, 6],
+				 5: [2, 4, 6, 7],
+				 6: [2, 4, 5, 7],
+				 7: [3, 5, 6]} 
+
+start, end = [int(i) for i in input().split()]
+queue = [start]
+visited = []
+
+def sol(n, visited):
+	if n[-1] == end:
+		return len(visited)
+	
+	if n[-1] in visited:
+		return len(visited)
+	
+	visited.append(n[-1])
+	length = 0
+	
+	for next_node in graph[n[-1]]:
+		n.append(next_node)
+		length = max(length, sol(n, visited))
+		queue.pop(-1)
+	return length
+
+print(sol(queue, visited))
+
+75번문제
+def sol(n):
+    n = list(str(n))
+    answer = 0
+    count = 1
+    d = {3 : 1, 6 : 2, 9 : 3}
+    
+    while n:
+        answer += d[int(n.pop())] * count
+        count *= 3
+        
+    return answer
+
+76번문제
+import numpy as np
+
+사각형 = 5
+탐색가능지역 = 3
+
+지뢰밭 = [[1, 0, 0, 1, 0],
+          [0, 1, 0, 0, 1],
+          [0, 0, 0, 1, 0],
+          [0, 0, 0, 0, 0],
+          [0, 0, 1, 0, 0]]
+
+s = 0
+for i in range(사각형 - 탐색가능지역 + 1):
+    for j in range(탐색가능지역):
+        if np.sum(지뢰밭[i:탐색가능지역+i, j:탐색가능지역+j]) > s: 
+            s = np.sum(지뢰밭[i:탐색가능지역+i, j:탐색가능지역+j])
+print(s)
+
+77번문제
+def sol(strings):
+    result = []
+    for i in range(1,len(strings)+1):
+        for j in range(i):
+            result.append(strings[j:j+len(strings)-i+1])
+    return result
+
+input1 = input()
+input2 = input()
+#문자열 나열될 수 있는 모든 경우의수 만들기
+list1 = set(sol(input1))
+list2 = set(sol(input2))
+#경우의 수 교집합
+answers = list1.intersection(list2)
+# 가장 긴 교집합
+answer = max(answers,key=len)
+print(len(answer))
+
+78번문제
+a = input().split(' ')
+n, k = a
+
+
+def sol(n, k):
+    i = 0
+    #q에 n만큼의 숫자를 넣어준다
+    q = [i for i in range(1,n+1)]
+
+    while len(q) > 2:
+        if i > len(q)-1:
+        #순환하다 i가 q의 길이보다 클 경우에 len(q)만큼 빼준다.
+        #[1,2,3,4,5,6] -> 1다음 4가 빠지고 그 다음은 4+3 = 7(index : 6)이 빠져야 하는데 
+        #i(현재 빠져야 할 index)가 len(q)보다 크므로 len(q)즉, 4를 빼준다. 
+        #이걸 마지막 2개가 남을 때 까지 반복함
+            i -= len(q)
+        q.pop(i)
+        i += k
+        i -= 1
+    print(q)
+sol(int(n),int(k))
+
+
+
+
+79번문제
+def sol(a, t):
+    b = a.copy()
+    c = []
+    for i in range(t):
+        b.insert(0,b.pop())
+    for i,j in zip(a,b):
+        c.append(abs(i-j))
+    index = c.index(min(c))
+    print("index :",index)
+    print("value :",a[index],b[index])
+
+sol(l,turn)
+
+80번문제
+from itertools import permutations #이 문제에서는 안쓰지만 어떤 것인지 확인해보세요.
+from itertools import combinations
+
+import itertools
+
+user_input = input().split(',')
+user_input_int = int(input())
+
+#print(list(itertools.combinations(a, 3)))
+
+print(list(map(''.join, combinations(user_input, user_input_int))))
+
+81번문제
+#첫번째 풀이
+value ='''0 1 0 0 0
+    0 0 0 0 0
+    0 0 0 1 0
+    0 0 1 0 0
+    0 0 0 0 0'''
+    print(value.split('\n'))
+    sp = value.split('\n')
+    count = 0
+    for i in sp:
+        sp[count] = i.replace('1', 'f').split(' ')
+        count += 1
+    print(sp)
+    count = 0
+    search = 0
+    for s in sp:
+        for i in s:
+            if i == 'f':
+                search = s.index(i)
+                if search > 0:
+                    s[search-1] = '*'
+                if search < 4:
+                    s[search+1] = '*'
+                if count > 0:
+                    sp[count-1][search] = '*'
+                if count < 4:
+                    sp[count+1][search] = '*'
+        count += 1
+    for i in sp:
+        print(i)
+#두번째 풀이
+inputList = []
+    for i in range(5):
+        inputList.extend(input().split())
+    for i in range(25):
+        if inputList[i] == "1":
+            inputList[i] = "f"
+            if i // 5 != 0:
+                inputList[i - 5] = "*"
+            if i // 5 != 4:
+                inputList[i + 5] = "*"
+            if i % 5 != 0:
+                inputList[i - 1] = "*"
+            if i % 5 != 4:
+                inputList[i + 1] = "*"
+    for i in range(25):
+        if i % 5 != 4:
+            print(inputList[i], end = "")
+        else:
+            print(inputList[i], " ")
+
+
+
+82번문제
+def sol():
+    i = 0
+    while i != 2:
+        i = int(input("데이터 입력(1), 프로그램 종료(2) :"))
+        if i == 2:
+            break
+        d = list(input("데이터를 입력하세요: "))
+        step =0
+        for i in d:
+            if i =="(":
+                step += 1
+            elif i==")":
+                step -=1
+
+            if step !=0:
+                return print(False)
+        if step==0:
+            return print(True)
+sol()
+
+83번문제
+def math(e):
+    m = {
+        ')':'(',
+        '}':'{',
+    }
+    stack = []
+    for i in e:
+        if i in '({':
+            stack.append(i)
+        elif i in m:
+            if len(stack) == 0:
+                return False
+            else:
+                t = m[i]
+                if t != stack.pop():
+                    return False
+    return len(stack) == 0
+
+while 1:
+    order = input('데이터 입력(1), 프로그램 종료(2) :')
+    if order == '1':
+        ex = input('데이터를 입력하세요 :')
+        print(math(ex))
+    else:
+        break
+
+
+84번문제
+from itertools import permutations
+
+user_input = input()
+k = int(input())
+l = [i for i in user_input]
+
+print(max(list(map(''.join, permutations(l, k)))))
+
+
+85번문제
+def solution(n):
+    answer='1'
+    if n == 1:
+        return answer
+    for i in range(1,n):
+        answer = rule(answer)
+    return answer
+def rule(n):
+    num_l = max([int(i) for i in n])
+    d = [str(i)+str(str(n).count(str(i))) for i in range(1,num_l+1)]
+    return ''.join(d)
+
+86번문제
+# point 각 접시별 점수가 들어있는 배열
+# dish 먹고자하는 접시의 위치
+def solution(point, dish):
+#배열 순서는 0부터 시작, 입력은 1부터시작이기 때문에 -1 해준다.
+    dish -=1
+    answer = 0
+#오름차순으로 정렬
+    s = sorted(point)
+    while True:
+# point 제일 앞의 점수를 추출하여  p에 넣어 놓는다. 즉, 앞에 도착한 접시의 점수!
+# pop과 append를 활용해 회전하도록 구현할 예정 !
+        p = point.pop(0)
+
+        #현재 s[0]은 point 배열을 에서 가장 작은 값을 가지고 있음!
+        #현재 가장 낮은 점수를 가지고 있는 접시가 앞에 도착했다면 먹도록 할것!
+        if s[0]==p:
+        #앞에 도착한 접시가 선택한 접시라면 먹고 반복문 종료
+            if dish == 0:
+                break
+            #선택한 접시 움직임.          
+            dish-=1
+            #한 접시를 먹었음으로 하나 줄어듬
+            s.pop(0)
+        else:
+            #접시위 초밥을 먹을 수 있는 조건이 충족되지 않아 그대로 둔다
+            # pop했던것을 다시 append.
+            point.append(p)
+            #접시의 움직임 만약 선택한 접시가 앞에 도착했다면 맨뒤로 보내고,
+            #그렇지 않다면 한칸 당긴다.
+            dish = len(point)-1 if dish==0 else dish-1
+            # 반복 한번당 접시 한번 지나감을 나타냄.
+        answer+=1
+    return answer
+
+#한글 변수 풀이
+def solution(접시점수, 먹을접시위치):
+    먹을접시위치 -= 1
+    정답 = 0
+    정렬된접시점수 = sorted(접시점수)
+    while True:
+        맨앞접시 = 접시점수.pop(0)
+        if 정렬된접시점수[0] == 맨앞접시:
+            if 먹을접시위치 == 0:
+                break
+            먹을접시위치 -= 1
+            정렬된접시점수.pop(0)
+        else:
+            접시점수.append(맨앞접시)
+            먹을접시위치 = len(접시점수) - 1 if 먹을접시위치 == 0 else 먹을접시위치 - 1
+        정답 += 1
+    return 정답
+print(solution(접시점수, 먹을접시위치))
+
+87번문제
+name = 'A C B D'.split(' ')
+point = list(map(int, '70 10 55 40'.split(' ')))
+
+def hojun(x): #이름과 기능을 바꿔서 적용해보세요.
+    return x[1]
+
+def sol(name, point):
+    d = {}
+    z = [[i, j] for i, j in zip(name, point)]
+    z = sorted(z, key=hojun, reverse=True)
+    
+    for i in range(len(z)):
+        d[z[i][0]] = i+1
+    return d
+
+print(sol(name, point))
+
+#아래 코드를 실행해보세요.
+test = 'AA CCCC BBB D'.split(' ')
+sorted(test, key=len)
+
+88번문제
+def make_map(n,m,char,obj):
+    #지도 초기화하기
+		#각 지도 가로/세로 두칸 외벽을 포함한 크기만큼 추가하기(각 끝 한칸씩)
+    world_map = [[0]*(n+2) for i in range(m+2)]
+    #지도 외벽 그리기
+    for i in range(len(world_map)):
+        for j in range(len(world_map[0])):
+            if i==0 or j==len(world_map[0])-1 or j==0 or i ==len(world_map)-1:
+                world_map[i][j]=2
+#     print(wordl_map)
+    #지도에 캐릭터 추가하기/ 외벽으로 인해 좌표에 +1을 해줍니다.
+    world_map[char[0]+1][char[1]+1] = 1
+    #지도에 장애물 추가하기
+    for i in obj:
+#         print(i)
+        #장애물을 추가하려는 자리에 캐릭터가 있을 시 캐릭터는 그대로둔다
+				# 마찬가지 외벽으로 인한 좌표 조정을 해준다.
+        world_map[i[0]+1][i[1]+1] = 2 if world_map[i[0]+1][i[1]+1] != 1 else 1
+    for i in world_map:
+        print(i)
+
+89번문제
+def move(world_map, moving):
+    x,y = 0,0
+    for i,m in enumerate(world_map):
+        if 1 in m:
+            x,y = m.index(1),i
+    world_map[y][x] = 0
+    for i in moving:
+        if i==1 and world_map[y-1][x]!=2:
+            y-=1
+            
+        elif i==2 and world_map[y+1][x]!=2:
+            y+=1
+            
+        elif i==3 and world_map[y][x-1]!=2:
+            x-=1
+            
+        elif i==4 and world_map[y][x+1]!=2:
+            x+=1
+    world_map[y][x] = 1
+    for i in world_map:
+        print(i)
+    return [x,y]
+
+90번문제
+import random as r
+
+l = [chr(i) for i in range(65, 91)]
+
+total_medicine = []
+medicine = []
+
+for i in range(100):
+    total_medicine.append(r.sample(l, 8))
+
+user_input = input().split(' ')
+result = []
+
+for i in total_medicine:
+    if len(set(i) & set(user_input[0])) == int(user_input[1]):
+        result.append(i)
+
+print(len(result))
+
+91번문제
+import random as r
+
+total_score = []
+class_score = []
+student_score = []
+
+for i in range(7):
+    class_score = []
+    for i in range(30):
+        student_score = []
+        for i in range(5):
+            student_score.append(r.randint(40, 100))
+        class_score.append(student_score)
+    total_score.append(class_score)
+    
+total_average = 0
+c_average = []
+s_average = 0
+# print(sum(total_score)) #Error
+
+for c in total_score:
+    for s in c:
+        s_average += sum(s)/5
+    c_average.append(s_average // 30)
+    s_average = 0
+
+print(c_average)
+print(sum(c_average)//len(c_average))
+
+
+92번문제
+import csv
+
+f = open('test.csv', 'r', encoding='utf-8')
+r = csv.reader(f)
+for line in r:
+    s1, s2 = '', ''
+    for i in line[1].replace(',', ''):
+        if i == '3':
+            s1 += '1'
+            s2 += '2'
+        elif i == '4':
+            s1 += '2'
+            s2 += '2'
+        elif i == '6':
+            s1 += '1'
+            s2 += '5'
+        else:
+            s1 += i
+            s2 += '0'
+    print(int(s1), int(s2))
+
+이과장,"333,356,766","S은행",'100-0000-0000-000'
+이과장,"5,000,000","S은행",'100-0000-0000-000'
+이과장,"3,200,000","S은행",'100-0000-0000-000'
+이과장,"3,300,000","S은행",'100-0000-0000-000'
+이과장,"5,300,000","S은행",'100-0000-0000-000'
+
+
+93번문제
+def solution(frame, page):
+    page = page.split(' ')
+    runTime = 0
+    temp = []
+
+    # frame이 0일때, page의 크기만큼 6을 곱해주고 끝낸다
+    if frame == 0:
+        runTime = len(page) * 6
+        return runTime
+
+    
+    for i in page:
+        if i in temp:
+            runTime += 1
+        else:
+						# 배열이 비었으면 무조건 넣어야 하므로 if문을 사용
+            if len(temp) < frame:
+                temp.append(i)
+            else:
+								# 가장 사용되지 않은 첫번째 배열을 제거하고 맨 뒤에 입력값을 저장
+                temp = temp[1:] + [i]
+            # if문 실행에 상관없이 runTime은 10이 추가된다
+            runTime += 6
+    
+    return runTime
+
+f = int(input())
+page = list(map(str,input()))
+
+
+print(solution(f, page))
+
+94번문제
+def sol(frame, page):
+    temp = []
+    runTime = 0
+
+    if frame == 0:
+        runTime = len(page) * 6
+        return runTime
+    # cacheSize가 0일때, cities의 크기만큼 10을 곱해주고 끝낸다
+
+    for i in page:
+        if i in temp:
+					  temp.append(temp.pop(0))
+            runTime += 1
+        else:
+            if len(temp) < frame:
+                temp.append(i)
+                # temp가 비었으면 무조건 넣어야 하므로 if문을 사용함
+            else:
+                temp = temp[1:] + [i]
+                # 가장 사용되지 않은 첫번째 배열을 제거하고 맨 뒤에 입력값을 저장해준다
+            runTime += 6
+            # if문 실행에 상관없이 runTime은 10이 추가된다
+    return runTime
+
+95번문제
+# 기본 입력부분입니다 
+# N, stmp, k를 입력받습니다.
+
+N = int(input())
+stmp = []
+for i in range(N):
+    stmp.append(list(map(int,input().split(' '))))
+k = int(input())
+
+
+def solution(stmp,n):
+    N = len(stmp)
+    # 0으로 만들어진 배열 생성 
+    # [[0]*N]*N으로 하면 안됨!!!!
+    p = [[0] * N for _ in range(N)]
+    
+    # 회전시키기 전 최초 1번찍어주기
+    p = sum_matrix(p,stmp)
+    #회전시키며 도장찍기
+    for i in range(n):
+        stmp = rotate(stmp)
+        p=sum_matrix(p,stmp)
+    return p
+
+#배열(도장) 회전시키기
+def rotate(stmp):
+    N = len(stmp)
+    rot = [[0] * N for _ in range(N)]
+    
+    for i in range(N):
+        for j in range(N):
+            rot[j][N-1-i] = stmp[i][j]
+    return rot
+
+#행렬 더하기 즉 도장이 찍히는 정도를 더한다.
+def sum_matrix(p,stmp):
+    for i in range(len(p)):
+        for j in range(len(p[0])):
+            p[i][j] = p[i][j]+stmp[i][j]
+    return p
+
+print(solution(stmp,k))
+
+96번문제
+텃밭 = [[0, 0, 0, 0, 0],
+        [0, 1, 0, 0, 0],
+        [0, 1, 0, 0, 0],
+        [0, 0, 1, 0, 0],
+        [0, 0, 0, 1, 0]]
+
+#역전된 상태의 텃밭
+# 텃밭 = [[1, 1, 1, 1, 1],
+#         [1, 0, 1, 1, 1],
+#         [1, 0, 1, 1, 1],
+#         [1, 1, 0, 1, 1],
+#         [1, 1, 1, 0, 1]]
+
+#역전된 상태의 텃밭의 합
+# 텃밭 = [[1, 1, 1, 1, 1],
+#         [1, 0, 1, 2, 2],
+#         [1, 0, 1, 2, 3],
+#         [1, 1, 0, 1, 2],
+#         [1, 2, 1, 0, 1]]
+
+def solution(텃밭):
+    넓이 = len(텃밭[0])
+    높이 = len(텃밭)
+    텃밭합 = [[0] * 넓이 for i in range(len(텃밭))]
+    for i in range(0, 높이):
+        for j in range(0, 넓이):
+            if 텃밭[i][j] == 0:
+                텃밭합[i][j] = 1
+            else:
+                텃밭합[i][j] = 0
+    
+    for i in range(1, 높이):
+        for j in range(1, 넓이):
+            if 텃밭합[i][j] == 1:
+                텃밭합[i][j] = min(텃밭합[i-1][j-1], min(텃밭합[i-1][j], 텃밭합[i][j-1])) + 1
+
+    maxValue = 0
+    x = 0
+    y = 0
+    for i in range(0, 높이):
+        for j in range(0, 넓이):
+            if maxValue < 텃밭합[i][j]:
+                maxValue = 텃밭합[i][j]
+                x = i
+                y = j
+                
+    print(maxValue, x, y)
+    print(maxValue, 'X', maxValue)
+    
+    for i in range(x - (maxValue - 1), x + 1):
+        for j in range(y - (maxValue - 1), y + 1):
+            텃밭[i][j] = '#'
+
+    return 텃밭
+    
+solution(텃밭)
+
+97번문제
+def sol(n,l):
+# n:택배원 수, l:택배들
+    answer = 0
+		#택배원 수 만큼의 배열 생성
+    man = [0]*n
+    #모든 택배가 상차 되었을 경우 종료
+    while sum(l)!=0:
+				#택배원 수 만큼 반복
+        for j in range(len(man)):
+						# 택배원이 배달하고있는 택배의 잔여거리가 0인경우(배송완료인경우) 택배상차
+            if man[j] == 0 and l:
+                man[j]+=l.pop(0)
+				#택배원들 배송거리 -1 처리
+        man = list(map(lambda x : x-1,man))
+				# 1회 반복단 1의 시간증가
+        answer+=1
+		# 남은 택배 잔여거리중 가장 많은 시간이 남은 택배를 더해줌
+    answer+=max(man)
+    return answer
+
+-동영상 강좌 풀이 Code-
+
+def solution(택배원의수, 택배거리):
+    time = 0
+    택배원택배거리 = [0] * 택배원의수
+    while 택배거리:
+        for i in range(택배원의수):
+            if 택배원택배거리[i] == 0 and 택배거리:
+                택배원택배거리[i] = 택배거리.pop(0)
+        택배원택배거리 = list(map(lambda x: x-1, 택배원택배거리))
+        time += 1
+        print('------------')
+        print(택배원택배거리, time)
+    print('-----end while------')
+    print(택배원택배거리, time)
+    time += max(택배원택배거리)
+    return time
+
+
+배달원 = 3
+택배 = [1,2,1,3,3,3]
+택배원택배거리 = [0, 0, 0]
+
+print(solution(배달원,택배))
+
+98번문제
+import re
+
+def solution(i):
+	#먼저 번호로 자릅니다.
+	idx = re.split("[0-9]번: ",i)
+	#잘라낸 문자열에 맨 앞이 "", 공백문자열이들어간 배열을 없애줍니다 
+	idx = idx[1:]
+	for i in range(len(idx)):
+			#띄어쓰기를 없애주고 , 단위로 잘라줘요
+	    idx[i] = idx[i].replace(" ","").split(",")
+	    for j in range(len(idx[i])):
+	        idx[i][j] = int(idx[i][j])
+	answer = []
+	for i in idx:
+	    for j in i:
+	        if j in answer:
+	            pass
+	        else:
+	            answer.append(j)
+	return answer
+
+i = "1번: 3,1 2번: 4 3번: 2,1,3 4번: 2,1,3,4"
+solution(i)
+
+- 동영상 강좌 풀이 Code - 
+import re
+
+def solution(s):
+    answer = []
+    l = re.split('[0-9]번: ', s)[1:]
+    for i in range(len(l)):
+        l[i] = list(map(int, l[i].replace(' ', '').split(',')))
+    for i in l:
+        for j in i:
+            if j in answer:
+                pass
+            else:
+                answer.append(j)
+    return answer
+
+i = '1번: 3,1 2번: 4 3번: 2,1,3 4번: 2,1,3,4'
+solution(i)
+
+
+
+
+
+99번문제
+def doong(l,k):
+    answer = ["pass" for i in range(len(k))]
+    for i in range(len(k)):
+        p = 0
+        while p<len(l)-1:
+            p += k[i]
+            l[p-1]-=1
+            if l[p-1]<0:
+                answer[i] = "fail"
+            
+    print(answer)
+
+
+100번문제
+def solution(plate, moves):
+    stack=[0]
+    point = 0
+    while moves:
+        m = moves.pop(0)
+        for i in range(len(plate)):
+            if plate[i][m-1]!=0:
+                if stack[len(stack)-1] == plate[i][m-1]:
+                    point+= plate[i][m-1]*2
+                    plate[i][m-1] = 0
+                    stack.pop()
+                else:
+                    stack.append(plate[i][m-1])
+                plate[i][m-1] = 0
+                break
+            else:
+                if  i==len(plate)-1 and plate[i][m-1]==0:
+                    point-=1
+
+    return point

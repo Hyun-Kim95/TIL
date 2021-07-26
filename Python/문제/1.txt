@@ -1,0 +1,980 @@
+1번문제
+nums = [100, 200, 300, 400, 500]
+nums.pop()
+nums.pop()
+print(nums)
+
+
+2번문제
+l = [200, 100, 300]
+l.insert(2, 10000)
+print(l)
+
+
+3번문제
+3)  class 'list'
+
+
+4번문제
+3)  입력 : a = 'p',   출력 : class 'char'
+
+class 'str' 이 맞는 출력값입니다
+
+
+5번문제
+4)  16
+
+
+6번문제
+2)  1
+
+
+7번문제
+3)  as
+5)  lage
+
+
+8번문제
+ '84'
+
+
+9번문제
+year = '2019'
+month = '04'
+day = '26'
+hour = '11'
+minute = '34'
+second = '27'
+
+print(year, month, day, sep='/', end=' ')
+print(hour, minute, second, sep=':')
+
+
+10번문제
+n = int(input())
+for i in range(1,n+1):
+	print(" "*(n-i)+("*"*(2*i-1)))
+
+
+11번문제
+s = 0
+
+for i in range(101):
+		s += i
+
+print(s)
+
+
+12번문제
+class Wizard:
+    def stats(self, health, mana, armor):
+        self.health = health
+        self.mana = mana
+        self.armor = armor
+ 
+    def attack(self):
+        print('파이어볼')
+
+x = Wizard(health=545, mana=210, armor=10)
+print(x.health, x.mana, x.armor)
+x.attack()
+
+
+13번문제
+planets = ['수성', '금성', '지구', '화성', '목성', '토성', '천왕성', '해왕성']
+
+n = int(input()) - 1
+print(planets[n])
+
+
+14번문제
+n = int(input())
+
+if n % 3 == 0:
+	print('짝')
+else:
+	print(n)
+
+
+15번문제
+n = input()
+
+print('안녕하세요. 저는 {}입니다.'.format(n))
+
+
+16번문제
+n = input()
+print(n[::-1])
+
+
+17번문제
+n = int(input())
+if n < 150:
+	print("NO")
+elif 150 <= n:
+	print("YES")
+
+
+18번문제
+data = list(map(int, input().split()))
+
+print(int(sum(data)/3))
+
+
+19번문제
+n = list(map(int, input().split()))
+print(n[0] ** n[1])
+
+
+20번문제
+data = list(map(int, input().split()))
+
+result = data[0] // data[1]
+left = data[0] % data[1]
+
+print(result, left)
+
+21번문제
+2)  x = { }
+
+
+22번문제
+2)  i % 6 == 0
+
+
+23번문제
+X
+
+
+24번문제
+name = input()
+print(name.upper())
+
+
+25번문제
+def solution(n):
+	return n * n * 3.14
+
+print(solution(int(input()))
+
+
+26번문제
+planets = {
+	'수성' : 'Mercury',
+	'금성' : 'Venus',
+	'지구' : 'Earth',
+	'화성' : 'Mars',
+	'목성' : 'Jupiter',
+	'토성' : 'Saturn',
+	'천왕성' : 'Uranus',
+	'해왕성' : 'Neptune',
+}
+
+name = input()
+print(planets[name])
+
+
+27번문제
+keys = input().split()
+values = map(int, input().split())
+
+result = dict(zip(keys, values))
+print(result)
+
+
+28번문제
+data = input()
+
+for i in range(len(data) - 1):
+	print(data[i], data[i+1], sep = '')
+
+
+29번문제
+data = input()
+
+if data.isupper():
+	print("YES")
+else:
+	print("NO")
+
+
+30번문제
+data = input()
+word = input()
+
+print(data.find(word))
+
+31번문제
+3)  l[a:b]
+
+
+32번문제
+n = input()
+l = list(n.strip().split())
+print(len(l))
+
+
+33번문제
+n = input()
+
+l = list(n.strip().split())
+len1 = len(l) - 1
+for i in range(len1, -1, -1):
+	print(l[i], end=' ')
+
+
+34번문제
+user_input = input()
+
+l = list(user_input.strip().split())
+l = [int (i) for i in l]
+
+if l != sorted(l):
+	print("NO")
+	
+else:
+	print("YES")
+
+
+35번문제
+def one(n):
+    def two(value):
+        sq = value ** n
+        return sq
+    return two
+
+a = one(2)
+b = one(3)
+c = one(4)
+print(a(10))
+print(b(10))
+print(c(10))
+
+
+36번문제
+n = int(input())
+for i in range(1, 10):
+	print(n*i, end = ' ')
+
+
+37번문제
+data = list(map(str, input().split()))
+count = 0
+for i in range(len(data)):
+	if data.count(data[i-1]) < data.count(data[i]):
+		count = i
+print("{}(이)가 총 {}표로 반장이 되었습니다.".format(data[count], data.count(data[count])))
+
+
+38번문제
+user_input = input()
+
+l = list(user_input.strip().split())
+l = [int (i) for i in l]
+
+count = 3
+#3개는 무조건 구매, 배열 정렬 후 1~3위 중 중복되는 숫자까지 포함
+
+data_sorted = sorted(list(l))
+
+print(data_sorted)
+for i in range(len(l)-1, 0, -1):
+	if data_sorted[-3] == l[i]:
+		count += 1
+print(count)
+
+
+39번문제
+n = input()
+print(n.replace("q", "e"))
+
+
+40번문제
+total = 0
+count = 0
+limit = int(input('제한무게는 얼마인가요? : '))
+n = int(input('몇명이 탈 수 있나요? : '))
+ 
+for i in range(n):
+    total += int(input('몸무게를 입력해주세요 : '))
+    if total <= limit:
+        count += 1
+
+        
+print(count)
+
+## 두 코드의 차이점은 무엇일까요?
+
+제한무게 = int(input())
+친구수 = int(input())
+친구몸무게 = []
+for i in range(친구수):
+    친구몸무게.append(int(input()))
+
+전체몸무게 = 0
+for i in range(len(친구몸무게)):
+    전체몸무게 += 친구몸무게[i]
+    print(전체몸무게, 제한무게)
+    if 전체몸무게 > 제한무게:
+        print(i)
+        break
+
+41번문제
+#인터넷에서 에라토스테네스의 체를 검색해보시고, 에라토스테네스의 체를 구현해보세요.
+
+def check_prime(n):
+    i = 2
+    while i < n:
+        if n % i == 0:
+            break
+        i = i + 1
+    if i == n:
+        print("YES")
+    else:
+        print("NO")
+check_prime(int(input()))
+
+###
+
+x = int(input())
+for i in range(2, x//2 + 1):
+    if x == 1:
+        print('소수가 아닙니다.')
+        break
+    if x == 2:
+        print('소수입니다.')
+        break
+    if x % i == 0:
+        print('소수가 아닙니다.')
+        break
+else:
+    print('소수입니다.')
+
+
+42번문제
+import datetime
+m = int(input())
+d = int(input())
+def findDay(a,b):
+    day = ["MON","TUE","WED","THU","FRI","SAT","SUN"]
+    return day[datetime.date(2020,a,b).weekday()]
+print(findDay(m,d))
+
+
+43번문제
+```python
+a = int(input())
+b = []
+
+while a:
+    print(a)
+    b.append(str(a % 2))
+    a = int(a / 2)
+
+print(b)
+b.reverse()
+print(b)
+print(''.join(b))
+
+
+44번문제
+n = list(map(int,input()))
+result = 0
+for i in n:
+	result += i
+	
+print(result)
+
+---
+
+result = 0
+for i in input():
+    result += int(i)
+
+print(result)
+
+
+45번문제
+import time
+t = time.time()
+t = int(t//(3600*24*365))+1970
+print(t)
+
+
+46번문제
+s = ''
+for i in range(101):
+    s += str(i)
+print(s)
+result = 0
+for i in s:
+    result += int(i)
+print(result)
+
+
+47번문제
+people = [
+         ('이호준', '01050004429'),
+         ('이호상', '01051442904'),
+         ('이준호', '01050003429'),
+         ('이호준', '01050004429'),
+         ('이준', '01050412904'),
+         ('이호', '0105000443904'),
+         ('이호준', '01050004429'),
+         ]
+
+print(len(set(people)))
+
+
+48번문제
+a = input()
+b = []
+
+for i in a:
+	if i.islower():
+		b.append(i.upper())
+	else:
+		b.append(i.lower())
+	
+for i in b:
+	print(i, end='')
+
+
+49번문제
+data = list(map(int, input().split()))
+print(sorted(data)[-1])
+
+
+50번문제
+def bubble(n, data):
+	for i in range(n-1):
+		for j in range(n-i-1):
+			if data[j] > data[j+1]:
+				data[j], data[j+1] = data[j+1], data[j]
+	for i in range(n):
+		print(data[i], end = " ")
+
+n = int(input())
+data = list(map(int, input().split()))
+
+bubble(n, data)
+
+
+
+
+
+
+
+
+1번문제
+nums = [100, 200, 300, 400, 500]
+nums.pop()
+nums.pop()
+print(nums)
+
+
+2번문제
+l = [200, 100, 300]
+l.insert(2, 10000)
+print(l)
+
+
+3번문제
+3)  class 'list'
+
+
+4번문제
+3)  입력 : a = 'p',   출력 : class 'char'
+
+class 'str' 이 맞는 출력값입니다
+
+
+5번문제
+4)  16
+
+
+6번문제
+2)  1
+
+
+7번문제
+3)  as
+5)  lage
+
+
+8번문제
+ '84'
+
+
+9번문제
+year = '2019'
+month = '04'
+day = '26'
+hour = '11'
+minute = '34'
+second = '27'
+
+print(year, month, day, sep='/', end=' ')
+print(hour, minute, second, sep=':')
+
+
+10번문제
+n = int(input())
+for i in range(1,n+1):
+	print(" "*(n-i)+("*"*(2*i-1)))
+
+
+11번문제
+s = 0
+
+for i in range(101):
+		s += i
+
+print(s)
+
+
+12번문제
+class Wizard:
+    def stats(self, health, mana, armor):
+        self.health = health
+        self.mana = mana
+        self.armor = armor
+ 
+    def attack(self):
+        print('파이어볼')
+
+x = Wizard(health=545, mana=210, armor=10)
+print(x.health, x.mana, x.armor)
+x.attack()
+
+
+13번문제
+planets = ['수성', '금성', '지구', '화성', '목성', '토성', '천왕성', '해왕성']
+
+n = int(input()) - 1
+print(planets[n])
+
+
+14번문제
+n = int(input())
+
+if n % 3 == 0:
+	print('짝')
+else:
+	print(n)
+
+
+15번문제
+n = input()
+
+print('안녕하세요. 저는 {}입니다.'.format(n))
+
+
+16번문제
+n = input()
+print(n[::-1])
+
+
+17번문제
+n = int(input())
+if n < 150:
+	print("NO")
+elif 150 <= n:
+	print("YES")
+
+
+18번문제
+data = list(map(int, input().split()))
+
+print(int(sum(data)/3))
+
+
+19번문제
+n = list(map(int, input().split()))
+print(n[0] ** n[1])
+
+
+20번문제
+data = list(map(int, input().split()))
+
+result = data[0] // data[1]
+left = data[0] % data[1]
+
+print(result, left)
+
+21번문제
+2)  x = { }
+
+
+22번문제
+2)  i % 6 == 0
+
+
+23번문제
+X
+
+
+24번문제
+name = input()
+print(name.upper())
+
+
+25번문제
+def solution(n):
+	return n * n * 3.14
+
+print(solution(int(input()))
+
+
+26번문제
+planets = {
+	'수성' : 'Mercury',
+	'금성' : 'Venus',
+	'지구' : 'Earth',
+	'화성' : 'Mars',
+	'목성' : 'Jupiter',
+	'토성' : 'Saturn',
+	'천왕성' : 'Uranus',
+	'해왕성' : 'Neptune',
+}
+
+name = input()
+print(planets[name])
+
+
+27번문제
+keys = input().split()
+values = map(int, input().split())
+
+result = dict(zip(keys, values))
+print(result)
+
+
+28번문제
+data = input()
+
+for i in range(len(data) - 1):
+	print(data[i], data[i+1], sep = '')
+
+
+29번문제
+data = input()
+
+if data.isupper():
+	print("YES")
+else:
+	print("NO")
+
+
+30번문제
+data = input()
+word = input()
+
+print(data.find(word))
+
+31번문제
+3)  l[a:b]
+
+
+32번문제
+n = input()
+l = list(n.strip().split())
+print(len(l))
+
+
+33번문제
+n = input()
+
+l = list(n.strip().split())
+len1 = len(l) - 1
+for i in range(len1, -1, -1):
+	print(l[i], end=' ')
+
+
+34번문제
+user_input = input()
+
+l = list(user_input.strip().split())
+l = [int (i) for i in l]
+
+if l != sorted(l):
+	print("NO")
+	
+else:
+	print("YES")
+
+
+35번문제
+def one(n):
+    def two(value):
+        sq = value ** n
+        return sq
+    return two
+
+a = one(2)
+b = one(3)
+c = one(4)
+print(a(10))
+print(b(10))
+print(c(10))
+
+
+36번문제
+n = int(input())
+for i in range(1, 10):
+	print(n*i, end = ' ')
+
+
+37번문제
+data = list(map(str, input().split()))
+count = 0
+for i in range(len(data)):
+	if data.count(data[i-1]) < data.count(data[i]):
+		count = i
+print("{}(이)가 총 {}표로 반장이 되었습니다.".format(data[count], data.count(data[count])))
+
+
+38번문제
+user_input = input()
+
+l = list(user_input.strip().split())
+l = [int (i) for i in l]
+
+count = 3
+#3개는 무조건 구매, 배열 정렬 후 1~3위 중 중복되는 숫자까지 포함
+
+data_sorted = sorted(list(l))
+
+print(data_sorted)
+for i in range(len(l)-1, 0, -1):
+	if data_sorted[-3] == l[i]:
+		count += 1
+print(count)
+
+
+39번문제
+n = input()
+print(n.replace("q", "e"))
+
+
+40번문제
+total = 0
+count = 0
+limit = int(input('제한무게는 얼마인가요? : '))
+n = int(input('몇명이 탈 수 있나요? : '))
+ 
+for i in range(n):
+    total += int(input('몸무게를 입력해주세요 : '))
+    if total <= limit:
+        count += 1
+
+        
+print(count)
+
+## 두 코드의 차이점은 무엇일까요?
+
+제한무게 = int(input())
+친구수 = int(input())
+친구몸무게 = []
+for i in range(친구수):
+    친구몸무게.append(int(input()))
+
+전체몸무게 = 0
+for i in range(len(친구몸무게)):
+    전체몸무게 += 친구몸무게[i]
+    print(전체몸무게, 제한무게)
+    if 전체몸무게 > 제한무게:
+        print(i)
+        break
+
+41번문제
+#인터넷에서 에라토스테네스의 체를 검색해보시고, 에라토스테네스의 체를 구현해보세요.
+
+def check_prime(n):
+    i = 2
+    while i < n:
+        if n % i == 0:
+            break
+        i = i + 1
+    if i == n:
+        print("YES")
+    else:
+        print("NO")
+check_prime(int(input()))
+
+###
+
+x = int(input())
+for i in range(2, x//2 + 1):
+    if x == 1:
+        print('소수가 아닙니다.')
+        break
+    if x == 2:
+        print('소수입니다.')
+        break
+    if x % i == 0:
+        print('소수가 아닙니다.')
+        break
+else:
+    print('소수입니다.')
+
+
+42번문제
+import datetime
+m = int(input())
+d = int(input())
+def findDay(a,b):
+    day = ["MON","TUE","WED","THU","FRI","SAT","SUN"]
+    return day[datetime.date(2020,a,b).weekday()]
+print(findDay(m,d))
+
+
+43번문제
+```python
+a = int(input())
+b = []
+
+while a:
+    print(a)
+    b.append(str(a % 2))
+    a = int(a / 2)
+
+print(b)
+b.reverse()
+print(b)
+print(''.join(b))
+
+
+44번문제
+n = list(map(int,input()))
+result = 0
+for i in n:
+	result += i
+	
+print(result)
+
+---
+
+result = 0
+for i in input():
+    result += int(i)
+
+print(result)
+
+
+45번문제
+import time
+t = time.time()
+t = int(t//(3600*24*365))+1970
+print(t)
+
+
+46번문제
+s = ''
+for i in range(101):
+    s += str(i)
+print(s)
+result = 0
+for i in s:
+    result += int(i)
+print(result)
+
+
+47번문제
+people = [
+         ('이호준', '01050004429'),
+         ('이호상', '01051442904'),
+         ('이준호', '01050003429'),
+         ('이호준', '01050004429'),
+         ('이준', '01050412904'),
+         ('이호', '0105000443904'),
+         ('이호준', '01050004429'),
+         ]
+
+print(len(set(people)))
+
+
+48번문제
+a = input()
+b = []
+
+for i in a:
+	if i.islower():
+		b.append(i.upper())
+	else:
+		b.append(i.lower())
+	
+for i in b:
+	print(i, end='')
+
+
+49번문제
+data = list(map(int, input().split()))
+print(sorted(data)[-1])
+
+
+50번문제
+def bubble(n, data):
+	for i in range(n-1):
+		for j in range(n-i-1):
+			if data[j] > data[j+1]:
+				data[j], data[j+1] = data[j+1], data[j]
+	for i in range(n):
+		print(data[i], end = " ")
+
+n = int(input())
+data = list(map(int, input().split()))
+
+bubble(n, data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
