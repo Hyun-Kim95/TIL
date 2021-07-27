@@ -15,7 +15,7 @@ public class UsingOverride {
 		last = obj;
 		obj = new Circle();	// Circle 객체 연결
 		last.next = obj;
-		
+
 		// 모든 도형 출력
 		Shape p = start;
 		while(p != null) {
