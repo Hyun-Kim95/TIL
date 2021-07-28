@@ -1,0 +1,5 @@
+﻿  소스.c
+C:\Hyun_Folder\TIL\Cwork\Pro0728\Pro0728\소스.c(46,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Hyun_Folder\TIL\Cwork\Pro0728\Pro0728\소스.c(51,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Hyun_Folder\TIL\Cwork\Pro0728\Pro0728\소스.c(24,9): warning C4101: 'a' :참조되지 않은 지역 변수입니다.
+  Pro0728.vcxproj -> C:\Hyun_Folder\TIL\Cwork\Pro0728\Debug\Pro0728.exe
