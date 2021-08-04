@@ -9,7 +9,6 @@ static char map[20][20] = {
 		"--------------------",
 		"--------------------",
 		"--------------------",
-		"----------ooo-------",
 		"--------------------",
 		"--------------------",
 		"--------------------",
@@ -19,7 +18,8 @@ static char map[20][20] = {
 		"--------------------",
 		"--------------------",
 		"--------------------",
-		"--------------------"
+		"--------------------",
+		"------------------oo"
 };
 
 void check(int i, int j) {
@@ -33,7 +33,7 @@ void check(int i, int j) {
 		if (map[i + 1][j - 1] == 'o')	neighbor++;
 		if (map[i + 1][j] == 'o')		neighbor++;
 		if (map[i + 1][j + 1] == 'o')	neighbor++;
-		if (neighbor >= 4 && neighbor < 2)		map[i][j] = '-';
+		if (neighbor >= 4 || neighbor < 2)		map[i][j] = '-';
 		else if (neighbor >= 2)					map[i][j] = 'o';
 	}
 	else if (i == 0 && j == 0) {
@@ -58,7 +58,7 @@ void check(int i, int j) {
 		if (map[i + 1][j - 1] == 'o')	neighbor++;
 		if (map[i + 1][j] == 'o')		neighbor++;
 		if (map[i + 1][j + 1] == 'o')	neighbor++;
-		if (neighbor >= 4 && neighbor < 2)		map[i][j] = '-';
+		if (neighbor >= 4 || neighbor < 2)		map[i][j] = '-';
 		else if (neighbor >= 2)					map[i][j] = 'o';
 	}
 	else if (i == 19) {
@@ -67,7 +67,7 @@ void check(int i, int j) {
 		if (map[i - 1][j + 1] == 'o')	neighbor++;
 		if (map[i][j - 1] == 'o')		neighbor++;
 		if (map[i][j + 1] == 'o')		neighbor++;
-		if (neighbor >= 4 && neighbor < 2)		map[i][j] = '-';
+		if (neighbor >= 4 || neighbor < 2)		map[i][j] = '-';
 		else if (neighbor >= 2)					map[i][j] = 'o';
 	}
 	else if (j == 0) {
@@ -76,7 +76,7 @@ void check(int i, int j) {
 		if (map[i][j + 1] == 'o')		neighbor++;
 		if (map[i + 1][j] == 'o')		neighbor++;
 		if (map[i + 1][j + 1] == 'o')	neighbor++;
-		if (neighbor >= 4 && neighbor < 2)		map[i][j] = '-';
+		if (neighbor >= 4 || neighbor < 2)		map[i][j] = '-';
 		else if (neighbor >= 2)					map[i][j] = 'o';
 	}
 	else if (j == 19) {
@@ -85,7 +85,7 @@ void check(int i, int j) {
 		if (map[i][j - 1] == 'o')		neighbor++;
 		if (map[i + 1][j - 1] == 'o')	neighbor++;
 		if (map[i + 1][j] == 'o')		neighbor++;
-		if (neighbor >= 4 && neighbor < 2)		map[i][j] = '-';
+		if (neighbor >= 4 || neighbor < 2)		map[i][j] = '-';
 		else if (neighbor >= 2)					map[i][j] = 'o';
 	}
 }
@@ -105,22 +105,20 @@ void run() {
 			for (int j = 0; j < 20; j++) {
 				check(i, j);
 			}
-			printf("\n");
 		}
-		printf("종료하시려면 'q' 를 입력하세요");
+		printf("종료하시려면 'q', 계속 진행하시려면 아무거나 입력하세요");
 		scanf(" %c", &end);
 		if (end == 'q') {
 			printf("종료합니다\n");
 			break;
 		}
+		system("cls");
 	}
 }
 
 int main() {
 	printf("\n9번 문제\n");
 	run();
-	
-
 	
 	return 0;
 }
