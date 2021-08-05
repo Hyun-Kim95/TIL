@@ -1,12 +1,13 @@
 package spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 public class ChangePasswordService {
 
-	@Autowired
 	private MemberDao memberDao;
 	
+	@Transactional
 	public void changePassword(String email, String oldPwd, String newPwd)
 	{
 		// email을 이용하여 memberDao에서 member객체를 추출
@@ -19,5 +20,9 @@ public class ChangePasswordService {
 		member.changePassword(oldPwd, newPwd);
 		// 문제없이 패스워드가 변경 됐으면 memberDao에 업데이트 진행
 		memberDao.update(member);
+	}
+	
+	public void setMemberDao(MemberDao memberDao) {
+		this.memberDao = memberDao;
 	}
 }

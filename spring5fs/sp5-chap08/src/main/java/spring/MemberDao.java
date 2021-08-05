@@ -27,6 +27,7 @@ public class MemberDao {	// 데이터 관리하는 역할
 
 	public Member selectByEmail(String email)
 	{
+		// 리스트는 리스튼데 맴버만 담음
 		List<Member> results = jdbcTemplate.query(
 				"select * from MEMBER where EMAIL = ?",
 				new RowMapper<Member>() {
@@ -76,7 +77,7 @@ public class MemberDao {	// 데이터 관리하는 역할
 				member.getName(), member.getPassword(), member.getEmail());
 	}
 	
-	public Collection<Member> selectAll() {
+	public List<Member> selectAll() {
 		List<Member> results = jdbcTemplate.query(
 				"select * from MEMBER",
 				new RowMapper<Member>() {

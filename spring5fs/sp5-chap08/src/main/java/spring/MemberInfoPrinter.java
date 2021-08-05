@@ -24,14 +24,14 @@ public class MemberInfoPrinter {
 		System.out.println();
 	}
 	
-	@Autowired
+//	@Autowired
 	public void setMemberDao(MemberDao memberDao)
 	{
 		this.memberDao = memberDao;
 	}
 	
-	@Autowired
-	@Qualifier("printer")	// 한정자
+//	@Autowired
+//	@Qualifier("printer")	// 한정자
 	// @Qualifier("printer") (AppCtx)빈객체에서 이름이 같은 것이 있을 때 특정한 것을 가져올 수 있음
 	public void setPrinter(MemberPrinter printer)
 	{

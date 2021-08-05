@@ -28,16 +28,16 @@ public class MemberListPrinter {
 		members.forEach(m -> printer.print(m));
 		// 람다식
 	}
-
-	@Autowired
-	public void setMemberDao(MemberDao memberDao) {
-		this.memberDao = memberDao;
-	}
-	
-	@Autowired
-	@Qualifier("printer")
-	public void setMemberPrinter(MemberPrinter printer)
-	{
-		this.printer = printer;
-	}
+//
+//	@Autowired
+//	public void setMemberDao(MemberDao memberDao) {
+//		this.memberDao = memberDao;
+//	}
+//	
+//	@Autowired
+//	@Qualifier("printer")
+//	public void setMemberPrinter(MemberPrinter printer)
+//	{
+//		this.printer = printer;
+//	}
 }
