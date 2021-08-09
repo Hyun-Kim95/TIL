@@ -1,0 +1,56 @@
+# 11번
+for i in range(1,10):
+    print(i)
+# ----------------------------------------------------------
+# 12번
+numbers = [1,2,6,8,4,3,9,5,7,1,2,8,4,3,9,5,7,1,2,4,3,9,2]
+memo = {}
+for i in numbers:
+    if i in memo:
+        memo[i] += 1
+    else:
+        memo[i] = 1
+print(memo)
+# ----------------------------------------------------------
+# 13번
+list_a = ['name', 'hp', 'mp', 'level']
+list_b = ['기사', 200, 30, 5]
+result = {}
+for i in range(len(list_a)):
+    result[list_a[i]] = list_b[i]
+
+print(result)
+# ----------------------------------------------------------
+# 14번
+year = int(input("태어난 해를 입력해 주세요>"))
+if year % 12 == 0:
+    tti = "원숭이"
+elif year % 12 == 1:
+    tti = "닭"
+elif year % 12 == 2:
+    tti = "개"
+elif year % 12 == 3:
+    tti = "돼지"
+elif year % 12 == 4:
+    tti = "뒤"
+elif year % 12 == 5:
+    tti = "소"
+elif year % 12 == 6:
+    tti = "범"
+elif year % 12 == 7:
+    tti = "토끼"
+elif year % 12 == 8:
+    tti = "용"
+elif year % 12 == 9:
+    tti = "뱀"
+elif year % 12 == 10:
+    tti = "말"
+else:
+    tti = "양"
+print(tti,"띠입니다.")
+# ----------------------------------------------------------
+# 15번
+print("# 우리 동네 애완 동물들")
+pets = {"구름":5, "초코":3, "아지":1, "호랑이":1}
+for i in pets:
+    print("{} {}살".format(i,pets[i]))
