@@ -1,23 +1,27 @@
 package chap07;
 
-public class MyStack_<T> implements IStack{
-	Object[] stck = new Object[10];
-	static int i;
+import java.util.Vector;
 
-	@Override
-	public Object pop() {
-		if (i == 0)
-			return null;
-		i--;
-		return (T)stck[i];
+public class MyStack_<E> implements IStack<E> {
+	Vector<E> data;
+
+	public MyStack_() {
+		data = new Vector<E>();
 	}
 
 	@Override
-	public boolean push(Object ob) {
-		if(i == 10)
-			return false;
-		stck[i] = ob;
-		i++;
-		return true;
+	public E pop() {
+		E result = null;
+		int i = data.size() - 1;
+		if (i >= 0) {
+			result = data.get(i);
+			data.remove(i);
+		}
+		return result;
+	}
+
+	@Override
+	public boolean push(E ob) {
+		return data.add(ob);
 	}
 }

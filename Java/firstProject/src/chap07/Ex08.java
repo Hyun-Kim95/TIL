@@ -6,11 +6,11 @@ import java.util.Scanner;
 public class Ex08 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		HashMap<String,Integer> point = new HashMap<>();
+		HashMap<String, Integer> point = new HashMap<>();
 		System.out.println("** 포인트 관리 프로그램입니다 **");
 		String[] sv = new String[255];
 		int q = 0;
-		while(true) {
+		while (true) {
 			System.out.print("이름과 포인트 입력>>");
 			String[] a = sc.nextLine().split(" ");
 			if (a[0].equals("그만"))
@@ -23,10 +23,11 @@ public class Ex08 {
 				q++;
 			}
 			point.put(a[0], k);
-			for(int i=0;i<point.size();i++) {
-				System.out.print("("+sv[i]+","+point.get(sv[i])+")");
+			for (int i = 0; i < point.size(); i++) {
+				System.out.print("(" + sv[i] + "," + point.get(sv[i]) + ")");
 			}
 			System.out.println();
 		}
+		sc.close();
 	}
 }
