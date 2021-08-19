@@ -45,6 +45,14 @@ public class MemberDao {	// 데이터 관리하는 역할
 		return results.isEmpty() ? null : results.get(0);
 	}
 	
+	public int checkCount(String email, String pw) {
+		String str = "select count(*) from MEMBER where EMAIL = '"+email+"'"
+				+ " and PASSWORD = '"+pw+"'";
+		
+		Integer count = jdbcTemplate.queryForObject(str, Integer.class);
+		return count;
+	}
+	
 	public void insert(Member member)
 	{
 		KeyHolder keyHolder = new GeneratedKeyHolder();

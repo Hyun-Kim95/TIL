@@ -20,8 +20,6 @@ public class MemberRegisterService {
 		this.memberDao = memberDao;
 	}
 	
-	
-	
 	public Long regist(RegisterRequest req)
 	{
 		//등록시 memberDao를 이용하여 이메일 중복 여부를 확인
@@ -37,7 +35,10 @@ public class MemberRegisterService {
 		memberDao.insert(newMember);
 		// 새로 추가된 ID(정수)값을 리턴
 		return newMember.getId();
-		
 	}
 	
+	public int checkCount(RegisterRequest req) {
+		int count = memberDao.checkCount(req.getEmail(),req.getPassword());
+		return count;
+	}
 }
