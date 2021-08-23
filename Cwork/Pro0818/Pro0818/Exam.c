@@ -76,8 +76,9 @@ void avg(FILE* fp1, FILE* fp2) {
 	char buffer0[100], buffer00[100];
 	
 }
+
 int main(void) {
-	/*printf("1번 문제\n");
+	printf("1번 문제\n");
 	FILE* fp1, * fp2;
 
 	char file1[100], file2[100];
@@ -94,9 +95,9 @@ int main(void) {
 	}
 	equals(fp1, fp2);
 	fclose(fp1);
-	fclose(fp2);*/
+	fclose(fp2);
 
-	/*printf("\n2번 문제\n");
+	printf("\n2번 문제\n");
 	FILE* fp11, * fp22;
 
 	char file11[100], file22[100];
@@ -112,9 +113,9 @@ int main(void) {
 	}
 	fileupper(fp11, fp22);
 	fclose(fp11);
-	fclose(fp22);*/
+	fclose(fp22);
 
-	/*printf("\n3번 문제\n");
+	printf("\n3번 문제\n");
 	FILE* fp111, * fp222;
 	char file111[100], file222[100];
 	printf("원본 파일 이름(dog.jpg): ");
@@ -125,9 +126,9 @@ int main(void) {
 	fp222 = fopen(file222, "wb");
 	copyfile(fp111, fp222);
 	fclose(fp111);
-	fclose(fp222);*/
+	fclose(fp222);
 
-	/*printf("\n4번 문제\n");
+	printf("\n4번 문제\n");
 	FILE* fpone, * fptwo;
 	char fileone[100], filetwo[100];
 	
@@ -144,9 +145,9 @@ int main(void) {
 	cmpfile(fpone, fptwo);
 	
 	fclose(fpone);
-	fclose(fptwo);*/
+	fclose(fptwo);
 	 
-	/*printf("\n5번 문제\n");
+	printf("\n5번 문제\n");
 	double total = 0;
 	char name[100];
 	char bufferr[1000] = { 0, };
@@ -170,7 +171,7 @@ int main(void) {
 	}
 	fclose(fp0);
 	fp0 = fopen("score.txt", "r");
-	fgets(buffer, 1000, fp0);
+	fgets(bufferr, 1000, fp0);
 	fprintf(fp00,"이름\t평균\n");
 	while (fgets(bufferr, 1000, fp0) != NULL)
 	{
@@ -178,9 +179,9 @@ int main(void) {
 		fprintf(fp00, "%s\t", name);
 		fprintf(fp00, "%0.2f\n", (kor + math + eng) / 3.0);
 	}
-	fclose(fp00);*/
+	fclose(fp00);
 
-	/*printf("\n6번 문제\n");
+	printf("\n6번 문제\n");
 	char name1[100];
 	char c;
 	int count = 0;
@@ -195,9 +196,9 @@ int main(void) {
 		count++;
 	}
 	printf("인쇄 가능한 문자의 개수는 %d", count);
-	fclose(ffp);*/
+	fclose(ffp);
 
-	/*printf("\n7번 문제\n");
+	printf("\n7번 문제\n");
 	char name2[100];
 	char buff[1000];
 	FILE* fpc;
@@ -209,26 +210,93 @@ int main(void) {
 	{
 		fprintf(fpc, "%s",buff);
 	}
-	fclose(fpc);*/
+	fclose(fpc);
 
 	printf("\n8번 문제\n");
 	double r;
 	double* r2;
 	FILE* ra1;
 	FILE* ra2;
-	
 
 	ra1 = fopen("random1.txt", "w");
 	ra2 = fopen("random2.bin", "wb");
-	for (int i = 0; i < 100; i++) {
-		srand(time(NULL));
+	srand(time(NULL));
+	for (int i = 0; i < 101; i++) {
 		r = rand();
-		r2 = &r;
+		r = r / 10000.0;
 		fprintf(ra1, "%lf", r);
-		fwrite(r2, sizeof(r2), 1, ra2);
-		printf("%lf %d\n", r, i);
+		fwrite(&r, sizeof(r), 1, ra2);
 	}
 	fclose(ra1);
 	fclose(ra2);
+
+	printf("\n10번 문제\n");
+	FILE* numf;
+	char bbuu[1000];
+	int i = 1;
+	numf = fopen("proverbs.txt", "r");
+
+	while (fgets(bbuu,1000,numf) != NULL)
+	{
+		printf("%d: %s",i, bbuu);
+		i++;
+	}
+	fclose(numf);
+ 
+	printf("\n12번 문제\n");
+	file* ft;
+	char pro[100];
+	char man[100];
+	char bufd[1000];
+	int line = 1;
+	printf("파일 이름: (proverbs.txt)");
+	scanf("%s", pro);
+	printf("탐색할 단어: (a)");
+	scanf("%s", man);
+	ft = fopen(pro, "r");
+	if (ft == null) {
+		fprintf(stderr, "파일 열기 실패");
+		exit(1);
+	}
+	while (fgets(bufd,1000,ft) != null)
+	{
+		if (strstr(bufd,man) != null) {
+			printf("%s:%d %s", pro, line, bufd);
+		}
+		line++;
+	}
+	fclose(ft);
+
+	printf("\n13번 문제\n");
+	FILE* fptok1, * fptok2;
+	char filetok1[100], filetok2[100];
+	char bufbuf[100];
+
+	printf("원본 파일 이름:(score.txt) ");
+	scanf("%s", filetok1);
+	printf("복사 파일 이름:(tok.txt) ");
+	scanf("%s", filetok2);
+	if ((fptok1 = fopen(filetok1, "r")) == NULL) {
+		fprintf(stderr, "파일을 열 수 없습니다.");
+		exit(1);
+	}
+	if ((fptok2 = fopen(filetok2, "w")) == NULL) {
+		fprintf(stderr, "파일을 열 수 없습니다.");
+		exit(1);
+	}
+
+	while (fgets(bufbuf, 100, fptok1) != NULL) {
+		char* pos = strtok(bufbuf, " ");
+		while (pos != NULL) {
+			if (strcmp("a"	, pos) == 0)
+				fprintf(fptok2, "b ");
+			else
+				fprintf(fptok2, "%s ", pos);
+			pos = strtok(NULL, " ");
+		}
+	}
+	fclose(fptok1);
+	fclose(fptok2);
+
 	return 0;
 }

@@ -142,6 +142,8 @@
     <ClCompile Include="binary_file.c" />
     <ClCompile Include="calc_circle_area.c" />
     <ClCompile Include="Exam.c" />
+    <ClCompile Include="Exam09.c" />
+    <ClCompile Include="Exam11.c" />
     <ClCompile Include="fseek.c" />
     <ClCompile Include="image_copy.c" />
   </ItemGroup>
