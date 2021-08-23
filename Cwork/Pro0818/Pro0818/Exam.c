@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<time.h>
 
 struct student
 {
@@ -144,10 +145,11 @@ int main(void) {
 	
 	fclose(fpone);
 	fclose(fptwo);*/
-
-	printf("\n5번 문제\n");
-	int total = 0;
+	 
+	/*printf("\n5번 문제\n");
+	double total = 0;
 	char name[100];
+	char bufferr[1000] = { 0, };
 	int kor, math, eng;
 	struct student table[3] = {
 		{"홍길동",90,80,70},
@@ -161,17 +163,72 @@ int main(void) {
 		fprintf(stderr, "파일을 열 수 없습니다.\n");
 		exit(1);
 	}
-	for (int i = 0; i < 3; i++) {
-		fprintf(fp0, "%s %d %d %d", table[i].name, table[i].kor, table[i].math, table[i].eng);
-		printf("%s %d %d %d \n", table[i].name, table[i].kor, table[i].math, table[i].eng);
+	fprintf(fp0,"이름\t국어\t수학\t영어\n");
+	for (int i = 0; i < 3; i++)
+	{
+		fprintf(fp0, "%s\t%d\t%d\t%d\t\n",table[i].name, table[i].kor, table[i].math, table[i].eng);
 	}
-	while (!feof(fp0)) {
-		fscanf(fp0, "%s %d %d %d", name, &kor, &math, &eng);
-		total += (kor + math + eng);
-		fprintf(fp00, "%s %.2lf \n", name, (double)total/3.0);
-	}
-
 	fclose(fp0);
-	fclose(fp00);
+	fp0 = fopen("score.txt", "r");
+	fgets(buffer, 1000, fp0);
+	fprintf(fp00,"이름\t평균\n");
+	while (fgets(bufferr, 1000, fp0) != NULL)
+	{
+		sscanf(bufferr, "%s %d %d %d", name, &kor, &math, &eng);
+		fprintf(fp00, "%s\t", name);
+		fprintf(fp00, "%0.2f\n", (kor + math + eng) / 3.0);
+	}
+	fclose(fp00);*/
+
+	/*printf("\n6번 문제\n");
+	char name1[100];
+	char c;
+	int count = 0;
+	FILE* ffp;
+	printf("파일 이름을 입력하시오: (proverbs.txt)");
+	scanf("%s", name1);
+	ffp = fopen(name1, "r");
+	while (c = fgetc(ffp))
+	{
+		if (c == EOF)
+			break;
+		count++;
+	}
+	printf("인쇄 가능한 문자의 개수는 %d", count);
+	fclose(ffp);*/
+
+	/*printf("\n7번 문제\n");
+	char name2[100];
+	char buff[1000];
+	FILE* fpc;
+	printf("파일 이름을 입력하시오: (test.c)");
+	scanf("%s", name2);
+	fpc = fopen(name2, "w");
+	
+	while (fgets(buff, 1000, stdin) != 0)
+	{
+		fprintf(fpc, "%s",buff);
+	}
+	fclose(fpc);*/
+
+	printf("\n8번 문제\n");
+	double r;
+	double* r2;
+	FILE* ra1;
+	FILE* ra2;
+	
+
+	ra1 = fopen("random1.txt", "w");
+	ra2 = fopen("random2.bin", "wb");
+	for (int i = 0; i < 100; i++) {
+		srand(time(NULL));
+		r = rand();
+		r2 = &r;
+		fprintf(ra1, "%lf", r);
+		fwrite(r2, sizeof(r2), 1, ra2);
+		printf("%lf %d\n", r, i);
+	}
+	fclose(ra1);
+	fclose(ra2);
 	return 0;
 }

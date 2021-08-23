@@ -1,12 +1,12 @@
 ﻿  Exam.c
-C:\Hyun_Folder\TIL\Cwork\Pro0818\Pro0818\Exam.c(37,14): warning C4013: 'toupper'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Hyun_Folder\TIL\Cwork\Pro0818\Pro0818\Exam.c(59,34): warning C4047: '=': 'char'의 간접 참조 수준이 'char *'과(와) 다릅니다.
-C:\Hyun_Folder\TIL\Cwork\Pro0818\Pro0818\Exam.c(60,34): warning C4047: '=': 'char'의 간접 참조 수준이 'char *'과(와) 다릅니다.
-C:\Hyun_Folder\TIL\Cwork\Pro0818\Pro0818\Exam.c(61,20): warning C4047: '==': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-C:\Hyun_Folder\TIL\Cwork\Pro0818\Pro0818\Exam.c(61,35): warning C4047: '==': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-C:\Hyun_Folder\TIL\Cwork\Pro0818\Pro0818\Exam.c(75,7): warning C4101: 'buffer0' :참조되지 않은 지역 변수입니다.
-C:\Hyun_Folder\TIL\Cwork\Pro0818\Pro0818\Exam.c(75,21): warning C4101: 'buffer00' :참조되지 않은 지역 변수입니다.
-C:\Hyun_Folder\TIL\Cwork\Pro0818\Pro0818\Exam.c(158,8): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Hyun_Folder\TIL\Cwork\Pro0818\Pro0818\Exam.c(159,9): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Hyun_Folder\TIL\Cwork\Pro0818\Pro0818\Exam.c(169,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  Pro0818.vcxproj -> C:\Hyun_Folder\TIL\Cwork\Pro0818\Debug\Pro0818.exe
+C:\TIL\Cwork\Pro0818\Pro0818\Exam.c(38,14): warning C4013: 'toupper'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\TIL\Cwork\Pro0818\Pro0818\Exam.c(60,34): warning C4047: '=': 'char'의 간접 참조 수준이 'char *'과(와) 다릅니다.
+C:\TIL\Cwork\Pro0818\Pro0818\Exam.c(61,34): warning C4047: '=': 'char'의 간접 참조 수준이 'char *'과(와) 다릅니다.
+C:\TIL\Cwork\Pro0818\Pro0818\Exam.c(62,20): warning C4047: '==': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\TIL\Cwork\Pro0818\Pro0818\Exam.c(62,35): warning C4047: '==': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\TIL\Cwork\Pro0818\Pro0818\Exam.c(76,7): warning C4101: 'buffer0' :참조되지 않은 지역 변수입니다.
+C:\TIL\Cwork\Pro0818\Pro0818\Exam.c(76,21): warning C4101: 'buffer00' :참조되지 않은 지역 변수입니다.
+C:\TIL\Cwork\Pro0818\Pro0818\Exam.c(224,19): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\TIL\Cwork\Pro0818\Pro0818\Exam.c(221,8): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\TIL\Cwork\Pro0818\Pro0818\Exam.c(222,8): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Pro0818.vcxproj -> C:\TIL\Cwork\Pro0818\Pro0818\Debug\Pro0818.exe
