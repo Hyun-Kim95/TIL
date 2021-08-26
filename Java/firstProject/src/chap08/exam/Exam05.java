@@ -24,10 +24,10 @@ public class Exam05 {
 			in2 = new InputStreamReader(fin2, "MS949");
 			System.out.println(p1+"와 "+p2+"를 비교합니다.");
 
-			int c1,c2,cnt=0;
+			int c1,c2 = 0,cnt=0;
 
-			while((c1 = in1.read()) != -1 && (c2 = in2.read()) != -1) {
-				System.out.println((char)c1+" "+(char)c2+" "+(c1==c2));
+			while((c1 = in1.read()) != -1 || c2 != -1){
+				c2 = in2.read();
 				if(c1 != c2) {
 					cnt++;
 				}
