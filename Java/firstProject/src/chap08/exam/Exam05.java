@@ -12,7 +12,7 @@ public class Exam05 {
 		FileInputStream fin2 = null;
 		InputStreamReader in1 = null;
 		InputStreamReader in2 = null;
-		System.out.println("전체 경로명이 아닌 파일 이름만 입력하는 경우, 파일은 프로젝트 폴더에 있어야 합니다.");
+		System.out.println("전체 경로명 입력");
 		try {
 			System.out.println("첫번째 파일 이름을 입력하세요>>(c:\\\\Temp\\\\test.txt)");
 			String p1 = sc.next();

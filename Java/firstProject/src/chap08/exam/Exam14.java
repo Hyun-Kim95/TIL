@@ -1,0 +1,88 @@
+package chap08.exam;
+
+import java.io.File;
+import java.util.Scanner;
+import java.util.Vector;
+
+public class Exam14 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Vector<String> v = new Vector<>();
+		String l = "c:\\";
+		v.add(l);
+		String m = "***** 파일 탐색기입니다. *****";
+		System.out.println(m);
+
+		while (true) {
+			int cnt = 0;
+			File a = new File(l);
+			System.out.println("\t[" + a.getPath() + "]");
+			File[] b = a.listFiles();
+			for (File f : b) {
+				if (f.isDirectory()) {
+					System.out.println("dir\t" + f.length() + "바이트\t" + f.getName());
+				} else {
+					System.out.println("file\t" + f.length() + "바이트\t" + f.getName());
+				}
+			}
+			System.out.print(">>");
+			m = sc.nextLine();
+			if (m.contains("그만"))
+				break;
+			else if (m.contains("..")) {
+				if (!l.equals("c:\\")) {
+					v.remove(v.size() - 1);
+					l = v.get(v.size() - 1);
+				}
+				continue;
+			}
+			String[] mr = m.trim().split(" ");
+			System.out.println(mr.length+" "+mr[0]);
+			if(mr.length == 1) {
+				for (File f : b) {
+					if (f.getName().equals(m) && f.isDirectory())
+						cnt++;
+				}
+				if (cnt == 0) {
+					System.out.println("정확한 디렉토리명을 입력해주세요");
+					continue;
+				}
+				if (l.charAt(l.length() - 1) == '\\')
+					l += m;
+				else
+					l += "\\" + m;
+				v.add(l);
+			} else if(mr.length == 2 && mr[0] == "mkdir") {
+				System.out.println("******************");
+				if (l.charAt(l.length() - 1) == '\\') {
+					l += mr[1];
+					File A = new File(l);
+					A.mkdir();
+				}
+				else {
+					l += "\\" + mr[1];
+					File A = new File(l);
+					A.mkdir();
+				}
+				System.out.println(mr[1]+" 디렉터리를 생성하였습니다.");
+			} else if(mr.length == 3 && mr[0] == "rename") {
+				System.out.println("______________________");
+				if (l.charAt(l.length() - 1) == '\\') {
+					File A = new File(l+mr[1]);
+					File B = new File(l+mr[2]);
+					A.renameTo(B);
+				}
+				else {
+					l += "\\" + mr[1];
+					File A = new File(l+"\\"+mr[1]);
+					File B = new File(l+"\\"+mr[2]);
+					A.renameTo(B);
+				}
+			}else {
+				System.out.println("올바른 명령어를 입력해주세요");
+			}
+		}
+		sc.close();
+	}
+}
