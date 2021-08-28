@@ -20,11 +20,11 @@ public class Exam14 {
 			System.out.println("\t[" + a.getPath() + "]");
 			File[] b = a.listFiles();
 			for (File f : b) {
-				if (f.isDirectory()) {
-					System.out.println("dir\t" + f.length() + "바이트\t" + f.getName());
-				} else {
-					System.out.println("file\t" + f.length() + "바이트\t" + f.getName());
-				}
+				if (f.isDirectory())
+					System.out.print("dir\t");
+				else
+					System.out.print("file\t");
+				System.out.println(f.length() + "바이트\t" + f.getName());
 			}
 			System.out.print(">>");
 			m = sc.nextLine();
@@ -38,7 +38,7 @@ public class Exam14 {
 				continue;
 			}
 			String[] mr = m.trim().split(" ");
-			System.out.println(mr.length+" "+mr[0]);
+			String l2 = l;
 			if(mr.length == 1) {
 				for (File f : b) {
 					if (f.getName().equals(m) && f.isDirectory())
@@ -48,37 +48,18 @@ public class Exam14 {
 					System.out.println("정확한 디렉토리명을 입력해주세요");
 					continue;
 				}
-				if (l.charAt(l.length() - 1) == '\\')
-					l += m;
-				else
-					l += "\\" + m;
+				l += "\\" + m;
 				v.add(l);
-			} else if(mr.length == 2 && mr[0] == "mkdir") {
-				System.out.println("******************");
-				if (l.charAt(l.length() - 1) == '\\') {
-					l += mr[1];
-					File A = new File(l);
-					A.mkdir();
-				}
-				else {
-					l += "\\" + mr[1];
-					File A = new File(l);
-					A.mkdir();
-				}
+			} else if(mr.length == 2 && mr[0].contains("mkdir")) {
+				l2 += "\\" + mr[1];
+				File A = new File(l2);
+				A.mkdir();
 				System.out.println(mr[1]+" 디렉터리를 생성하였습니다.");
-			} else if(mr.length == 3 && mr[0] == "rename") {
-				System.out.println("______________________");
-				if (l.charAt(l.length() - 1) == '\\') {
-					File A = new File(l+mr[1]);
-					File B = new File(l+mr[2]);
-					A.renameTo(B);
-				}
-				else {
-					l += "\\" + mr[1];
-					File A = new File(l+"\\"+mr[1]);
-					File B = new File(l+"\\"+mr[2]);
-					A.renameTo(B);
-				}
+			} else if(mr.length == 3 && mr[0].contains("rename")) {
+				File A = new File(l2+"\\"+mr[1]);
+				File B = new File(l2+"\\"+mr[2]);
+				A.renameTo(B);
+				System.out.println(mr[1]+"를 "+mr[2]+"로 변경하였습니다.");
 			}else {
 				System.out.println("올바른 명령어를 입력해주세요");
 			}
