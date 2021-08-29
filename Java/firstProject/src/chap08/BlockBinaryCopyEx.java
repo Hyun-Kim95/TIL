@@ -15,7 +15,7 @@ public class BlockBinaryCopyEx {
 			FileOutputStream fo = new FileOutputStream(dest);
 			byte[] buf = new byte[1024 * 10]; // 10KB 버퍼
 			while (true) {
-				// 버퍼 크기만큼 읽기, n은 실제 일은 바이트
+				// 버퍼 크기만큼 읽기, n은 실제 읽은 바이트
 				int n = fi.read(buf);
 				// buf[0] 부터 n 바이트 쓰기
 				fo.write(buf, 0, n);
