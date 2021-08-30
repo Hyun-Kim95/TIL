@@ -243,6 +243,88 @@
 
 ### CSS 삽입 방법
 
-* 인라인
-* 내부
-* 외부
+1. **인라인 스타일**
+
+* 장점: HTML 문서에 가장 간단하게 CSS를 삽입
+* 단점: CSS를 HTML 태그와 같은 행에 사용하여 HTML 태그가 복잡함
+
+2. **내부 스타일 시트**
+
+* 스타일 태그 내에 삽입하는 방식
+
+3. **외부 스타일 시트**
+
+* CSS부분을 별도의 파일로 만들어서 HTML 부분과 완전히 분리하는 방식
+
+### CSS 텍스트
+
+* ![image](https://user-images.githubusercontent.com/75933619/131274084-959090be-0b78-41e8-91f5-ed4d7b9eee52.png)
+* text-align : center;
+  * 글자 중앙 정렬
+* text-decoration : underline;
+  * 글자 밑줄
+
+* line-height : 150%;
+  * 줄 간격
+
+### CSS 링크
+
+* <a href="#"\>
+  * 임시 링크
+* a:link : 링크 설정
+* a:visited : 링크 클릭 후의 설정
+* a:hover : 링크에 마우스를 가져갔을 때의 설정
+* a:active : 클릭하는 순간의 설정
+
+### CSS 선택자
+
+* 태그 선택자
+* 아이디 선택자
+  * #으로 시작하며 웹 페이지에서 CSS로 꾸미고자 하는 영역을 지정하는 역할
+  * 하나의 웹 페이지에서 유일해야 하고 중복 사용 불가
+  * <span id="position"\>내용</span\>
+* 클래스 선택자
+  * 두 개 이상의 영역을 CSS로 꾸미고자 할 때 사용
+  * .으로 시작
+
+* 후손 선택자
+  * CSS 코드가 좀 더 간결해지고 모듈화가 가능하여 CSS코딩 작업이 수월해짐.
+
+  * \#method span{
+
+       color: #0000ff;
+
+       font-weight: bold;
+
+      }
+
+    * method 아이디 안의 span 태그에 적용
+
+### CSS 주석
+
+* /* 주석 */
+
+### CSS 배경
+
+* 색상
+  * background-color
+* 이미지 삽입
+  * background-image:url("")
+
+* 반복 설정
+
+  ![image](https://user-images.githubusercontent.com/75933619/131298411-ee8cb4d4-c5f2-4c2d-a363-a4250162626a.png)
+
+* 위치 설정
+
+![image](https://user-images.githubusercontent.com/75933619/131300807-bdab9922-ffbc-44ad-b304-df6d0fb9d48e.png)
+
+### CSS 목록
+
+* 목록의 글머리 형태 설정하기
+
+![image](https://user-images.githubusercontent.com/75933619/131301333-f38265a5-245b-4282-a682-1bd8a00c65ec.png)
+
+* 목록의 글머리에 이미지 삽입
+  * list-style-image: url("dot_blue.gif");
+
