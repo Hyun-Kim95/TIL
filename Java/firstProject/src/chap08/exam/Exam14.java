@@ -6,6 +6,15 @@ import java.util.Vector;
 
 public class Exam14 {
 
+	public static File chk(String s, File[] b) {
+		for(File f: b) {
+			if(f.getName().equals(s)) {
+				return f;
+			}
+		}
+		return null;
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Vector<String> v = new Vector<>();
@@ -15,7 +24,7 @@ public class Exam14 {
 		System.out.println(m);
 
 		while (true) {
-			int cnt = 0;
+			File cnt;
 			File a = new File(l);
 			System.out.println("\t[" + a.getPath() + "]");
 			File[] b = a.listFiles();
@@ -24,7 +33,7 @@ public class Exam14 {
 					System.out.print("dir\t");
 				else
 					System.out.print("file\t");
-				System.out.println(f.length() + "바이트\t" + f.getName());
+				System.out.printf("%-10s\t %s\n",f.length()+"바이트", f.getName());
 			}
 			System.out.print(">>");
 			m = sc.nextLine();
@@ -40,22 +49,34 @@ public class Exam14 {
 			String[] mr = m.trim().split(" ");
 			String l2 = l;
 			if(mr.length == 1) {
-				for (File f : b) {
-					if (f.getName().equals(m) && f.isDirectory())
-						cnt++;
-				}
-				if (cnt == 0) {
+				cnt = chk(mr[0],b);
+				if (cnt == null || !cnt.isDirectory()) {
 					System.out.println("정확한 디렉토리명을 입력해주세요");
 					continue;
 				}
 				l += "\\" + m;
 				v.add(l);
 			} else if(mr.length == 2 && mr[0].contains("mkdir")) {
+				cnt = chk(mr[1],b);
+				if(cnt != null) {
+					System.out.println("같은 이름이 존재합니다.");
+					continue;
+				}
 				l2 += "\\" + mr[1];
 				File A = new File(l2);
 				A.mkdir();
 				System.out.println(mr[1]+" 디렉터리를 생성하였습니다.");
 			} else if(mr.length == 3 && mr[0].contains("rename")) {
+				cnt = chk(mr[1],b);
+				if(cnt == null) {
+					System.out.println(mr[1]+"는 존재하지 않습니다.");
+					continue;
+				}
+				cnt = chk(mr[2],b);
+				if(cnt != null) {
+					System.out.println(mr[2]+"와 같은 이름이 존재합니다.");
+					continue;
+				}
 				File A = new File(l2+"\\"+mr[1]);
 				File B = new File(l2+"\\"+mr[2]);
 				A.renameTo(B);
