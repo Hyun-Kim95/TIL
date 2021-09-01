@@ -15,13 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="malloc3.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="book.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="exam.c">
+    <ClCompile Include="ClientProgram.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
