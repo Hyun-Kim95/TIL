@@ -11,10 +11,7 @@ import spring.MemberRegisterService;
 import spring.RegisterRequest;
 
 public class RegisterRequestValidator implements Validator{
-	private MemberRegisterService memberRegisterService;
-	
 	public void setMemberRegisterService(MemberRegisterService memberRegisterService) {
-		this.memberRegisterService = memberRegisterService;
 	}
 	
 	private static final String emailRegExp =
