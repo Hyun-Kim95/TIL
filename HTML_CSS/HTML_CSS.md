@@ -328,3 +328,74 @@
 * 목록의 글머리에 이미지 삽입
   * list-style-image: url("dot_blue.gif");
 
+### 박스 모델
+
+* 관련 코드
+
+  ```
+  various_border, border_radius, book_banner
+  ```
+
+![image](https://user-images.githubusercontent.com/75933619/132147830-2081911c-56c0-420b-b41e-5939076f4668.png)
+
+* border
+
+  ![image](https://user-images.githubusercontent.com/75933619/132147903-0e1cfdef-fcac-41b9-8056-59133dc2ff3a.png)
+
+  * border-radius: 15px;
+    * 테두리 둥글게 바꿔줌
+
+* margin, padding
+
+  ![image](https://user-images.githubusercontent.com/75933619/132147948-add92e49-1ebe-4e72-82cd-81f4f8ef0ded.png)
+
+### 디스플레이
+
+* 관련 코드
+
+  ```
+  inline_block, h_menu, v_menu, boxes, 
+  ```
+
+* 인라인과 블록 방식
+
+  ![인라인 블록](https://user-images.githubusercontent.com/75933619/132149510-2dd9f584-bee9-4d0b-bd59-a6fc357e8d4b.png)
+
+* 속성
+
+  ![image](https://user-images.githubusercontent.com/75933619/132150905-f536c43e-8b3a-4ac5-9443-0ecc5e3a60b2.png)
+  * ex) li {
+
+    ​	display : inline;
+
+    }
+
+    * 블록 방식을 인라인 방식으로 변경
+
+### 테이블과 폼
+
+* 관련 코드
+
+  ```
+  table_border, login_form, english_class, schedule, join_form
+  ```
+
+* 테이블에 border를 설정하면 이중 실선으로 박스가 만들어짐
+
+* 단일 실선으로 만들려면
+
+  ```html
+  <style>
+      table {
+        border-collapse: collapse;	/* 이게 같이 있어야 단일 실선 */
+      }
+      table, td, th {					/* 이것만 있으면 이중실선 */
+        border: solid 1px #cccccc;
+      }
+  </style>
+  ```
+
+* width로 table 길이를 정해주고 각 열마다 길이를 정해주면 마지막 열은 전체 길이와 자동 계산돼서 정해짐
+
+* vertical-align : top;
+  * 상단 정렬
