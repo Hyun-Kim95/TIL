@@ -11,15 +11,15 @@ import javax.swing.JFrame;
 public class IndepClassListener extends JFrame{
 	public IndepClassListener() {
 		setTitle("Action 이벤트 리스너 예제");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	// 엑스누르면 프로그램 종료
 		Container c = getContentPane();
 		c.setLayout(new FlowLayout());
 		JButton btn = new JButton("Action");
 		btn.addActionListener(new MyActionListener());	// Action 이벤트 리스너 달기
 		c.add(btn);
 		
-		setSize(350,150);
-		setVisible(true);
+		setSize(350,150);								// 레이블의 크기
+		setVisible(true);								// 눈에 보이게 함
 	}
 	public static void main(String[] args) {
 		new IndepClassListener();
