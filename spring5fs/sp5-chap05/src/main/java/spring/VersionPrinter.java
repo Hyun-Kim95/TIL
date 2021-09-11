@@ -1,4 +1,4 @@
-﻿package spring;
+package spring;
 
 public class VersionPrinter {
 

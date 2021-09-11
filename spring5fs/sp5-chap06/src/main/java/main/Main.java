@@ -10,13 +10,13 @@ import spring.Client;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException{
-		AbstractApplicationContext ctx =
+	public static void main(String[] args) throws IOException {
+		AbstractApplicationContext ctx = 
 				new AnnotationConfigApplicationContext(AppCtx.class);
-		
+
 		Client client = ctx.getBean(Client.class);
 		client.send();
-		
+
 		ctx.close();
 	}
 

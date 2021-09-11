@@ -1,6 +1,7 @@
 package controller;
 
 public class LoginCommand {
+
 	private String email;
 	private String password;
 	private boolean rememberEmail;
@@ -28,4 +29,5 @@ public class LoginCommand {
 	public void setRememberEmail(boolean rememberEmail) {
 		this.rememberEmail = rememberEmail;
 	}
+
 }

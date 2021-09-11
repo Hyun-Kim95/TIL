@@ -9,7 +9,7 @@ import spring.Client2;
 
 @Configuration
 public class AppCtxWithPrototype {
-	
+
 	@Bean
 	@Scope("prototype")
 	public Client client() {

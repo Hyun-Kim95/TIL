@@ -7,7 +7,7 @@
 	<groupId>sp5</groupId>
 	<artifactId>sp5-chap04</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-    <!-- 의존 주입 -->
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -15,7 +15,7 @@
 			<version>5.0.2.RELEASE</version>
 		</dependency>
 	</dependencies>
-    <!-- 여기까지  -->
+
 	<build>
 		<plugins>
 			<plugin>
@@ -29,4 +29,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>

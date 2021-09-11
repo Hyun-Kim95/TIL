@@ -19,22 +19,24 @@ public class ChangePwdController {
 
 	private ChangePasswordService changePasswordService;
 
-	public void setChangePasswordService(ChangePasswordService changePasswordService) {
+	public void setChangePasswordService(
+			ChangePasswordService changePasswordService) {
 		this.changePasswordService = changePasswordService;
 	}
-	
+
 	@GetMapping
 	public String form(
 			@ModelAttribute("command") ChangePwdCommand pwdCmd) {
 		return "edit/changePwdForm";
 	}
-	
+
 	@PostMapping
 	public String submit(
 			@ModelAttribute("command") ChangePwdCommand pwdCmd,
-			Errors errors, HttpSession session) {
+			Errors errors,
+			HttpSession session) {
 		new ChangePwdCommandValidator().validate(pwdCmd, errors);
-		if(errors.hasErrors()) {
+		if (errors.hasErrors()) {
 			return "edit/changePwdForm";
 		}
 		AuthInfo authInfo = (AuthInfo) session.getAttribute("authInfo");
@@ -44,7 +46,7 @@ public class ChangePwdController {
 					pwdCmd.getCurrentPassword(),
 					pwdCmd.getNewPassword());
 			return "edit/changedPwd";
-		} catch(WrongIdPasswordException e) {
+		} catch (WrongIdPasswordException e) {
 			errors.rejectValue("currentPassword", "notMatching");
 			return "edit/changePwdForm";
 		}

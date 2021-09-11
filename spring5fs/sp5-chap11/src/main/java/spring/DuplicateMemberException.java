@@ -1,10 +1,9 @@
 package spring;
 
-public class DuplicateMemberException extends RuntimeException{
+public class DuplicateMemberException extends RuntimeException {
 
-	public DuplicateMemberException(String message)
-	{
+	public DuplicateMemberException(String message) {
 		super(message);
 	}
-	
+
 }

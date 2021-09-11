@@ -8,7 +8,7 @@ import spring.Client2;
 
 @Configuration
 public class AppCtx {
-	
+
 	@Bean
 	public Client client() {
 		Client client = new Client();

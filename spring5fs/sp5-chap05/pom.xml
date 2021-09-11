@@ -7,7 +7,7 @@
 	<groupId>sp5</groupId>
 	<artifactId>sp5-chap05</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-    <!-- 의존 주입 -->
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -20,8 +20,9 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>1.8.13</version>
 		</dependency>
+		
 	</dependencies>
-    <!-- 여기까지  -->
+
 	<build>
 		<plugins>
 			<plugin>
@@ -35,4 +36,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
