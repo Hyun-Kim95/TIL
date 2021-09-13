@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>포토 갤러리</title>
+  <style>
+    #logo{
+      font-size: 16px;
+      color: #3e2b23;
+      padding: 10px 0 0 30px;
+      float: left;
+    }
+    #top_menu{
+      float: right;
+      padding: 10px 10px 0 0;
+    }
+    #header{
+      width: 800px;
+      height: 40px;
+      background-color: #dddddd;
+    }
+    #left{
+      float: left;
+      width: 150px;
+      height: 600px;
+      background-color: #343333;
+      color: #e2e2e2;
+    }
+    #left h3{
+      font-weight: normal;
+      padding: 20px 0 0 30px;
+    }
+    #left ul{
+      list-style-type: none;
+      font-size: 14px;
+      padding: 10px 10px 5px 25px;
+    }
+    #left li{
+      padding: 3px;
+    }
+    #right{
+      width: 650px;
+      height: 600px;
+      float: left;
+      background-color: #252525;
+    }
+    #main_title{
+      width: 572px;
+      padding: 10px;
+      border: solid 5px #444444;
+      margin: 24px 0 0 24px;
+      font-size: 18px;
+      color: white;
+      font-weight: bold;
+    }
+    .main_img{
+      padding: 15px 0 0 24px;
+      width: 600px;
+      height: 350px;
+    }
+    #thumnail{
+      padding: 30px 0 0 70px;
+    }
+    #move_left{
+      float: left;
+      margin: 0 20px 0 40px;
+    }
+    #thumnail img{
+      float: left;
+      margin-top: 3px;
+      border: solid 5px #3d3d3d;
+      width: 50px;
+      height: 50px;
+    }
+    #move_right{
+      float: left;
+      margin: 0 0 0 20px;
+    }
+    a:hover{
+      border: solid 5px #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div id="logo">PHOTO GALLERY</div>
+    <div id="top_menu">로그인 | 회원가입 | 방명록</div>
+  </div>
+  <div id="left">
+    <h3>포토갤러리</h3>
+    <ul>
+      <li>+ 풍경</li>
+      <li>+ 일상</li>
+      <li>+ 인물</li>
+      <li>+ 가족</li>
+    </ul>
+  </div>
+  <div id="right">
+    <h3 id="main_title">풍경 사진</h3>
+    <img class="main_img" src="img1.png">
+    <div id="thumnail">
+      <div id="move_left">
+        <img src="left.png">
+      </div>
+      <a href="#" ><img src="img1.png"></a>
+      <a href="#" ><img src="img1.png"></a>
+      <a href="#" ><img src="img1.png"></a>
+      <a href="#" ><img src="img1.png"></a>
+      <a href="#" ><img src="img1.png"></a>
+      <div id="move_right">
+        <img src="right.png">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
