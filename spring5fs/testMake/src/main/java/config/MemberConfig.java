@@ -7,8 +7,8 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import dao.NewDao;
-import service.NewService;
+import DAO.NewDao;
+import Service.NewService;
 
 @Configuration
 @EnableTransactionManagement
@@ -18,7 +18,7 @@ public class MemberConfig {
 	public DataSource dataSource() {
 		DataSource ds = new DataSource();
 		ds.setDriverClassName("com.mysql.jdbc.Driver");
-		ds.setUrl("jdbc:mysql://localhost/spring5fs?serverTimezone=UTC");
+		ds.setUrl("jdbc:mysql://localhost:8086/spring5fs?serverTimezone=UTC");
 		ds.setUsername("spring5");
 		ds.setPassword("spring5");
 		ds.setInitialSize(2);
@@ -40,7 +40,7 @@ public class MemberConfig {
 	@Bean
 	public NewDao dao()
 	{
-		return new NewDao();
+		return new NewDao(dataSource());
 	}
 	
 	@Bean 

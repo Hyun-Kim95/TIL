@@ -9,8 +9,9 @@ import spring.MemberRegisterService;
 import survey.SurveyController;
 */
 
-import controller.NewController;
-import service.NewService;
+import Controller.NewController;
+import Controller.NewRegisterController;
+import Service.NewService;
 @Configuration
 public class ControllerConfig {
 /*
@@ -36,6 +37,12 @@ public class ControllerConfig {
 	@Bean
 	public NewController controller() {
 		NewController c = new NewController(service);
+		return c;
+	}
+	
+	@Bean
+	public NewRegisterController registerController() {
+		NewRegisterController c = new NewRegisterController(service);
 		return c;
 	}
 	

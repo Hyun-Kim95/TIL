@@ -95,24 +95,19 @@ body {
 <title>Main</title>
 </head>
 <body width="100%" height="100%">
-	<form action="index.html" method="post" class="loginForm">
+	<form:form action="runLogin" class="loginForm">
 		<h2>Login</h2>
 		<div class="idForm">
-			<input type="text" class="id" placeholder="ID">
+			<input type="text" name="id" class="id" placeholder="ID"/>
 		</div>
 		<div class="passForm">
-			<input type="password" class="pw" placeholder="PW">
+			<input type="password" name="password" class="pw" placeholder="PW"/>
 		</div>
-		<button type="button" class="btn" onclick="button()">LOG IN</button>
-		<script>
-      	let button = () => {
-        	alert('login Button !')
-        }
-      </script>
+		<button type="submit" class="btn">LOG IN</button>
 		<div class="bottomText">
 		<!-- 이동 -->
 			Don't you have ID? <a href="<c:url value="/register" />">sign up</a>
 		</div>
-	</form>
+	</form:form>
 </body>
 </html>
