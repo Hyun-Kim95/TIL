@@ -399,3 +399,78 @@
 
 * vertical-align : top;
   * 상단 정렬
+
+### float 속성
+
+* 관련 코드
+
+  ```
+  float, image_layout, float_layout, roll_screen, seed_shop, photo_gallery
+  ```
+
+* clear 속성
+
+  * float 속성을 해제하는 역할
+
+    ![image](https://user-images.githubusercontent.com/75933619/133009707-efb20aab-1fb6-43a8-9215-b41b568eaf17.png)
+
+### position 속성
+
+* 관련 코드
+
+  ```
+  position, position_layout,company_main
+  ```
+
+* relative
+  * 원래 박스가 있던 위치를 기준으로 박스를 이동(해당 박스에만 적용)
+* absolute
+  * relative와 반대되는 개념
+  * 부모 박스의 position이 relative 또는 absolute로 설정되어 있다면 해당 부모 박스의 원점을 기준으로 배치
+
+# HTML5 레이아웃
+
+* 관련 코드
+
+  ```
+  html5_layout, fixed_2col, fixed_3col, part_fixed_2col, flexible_2col
+  ```
+
+* 레이아웃 예
+
+  ![image](https://user-images.githubusercontent.com/75933619/133035670-fd2d3187-7d68-436e-b156-3e27abd9ac87.png)
+
+* HTML5에 추가된 레이아웃 관련 태그
+
+  ![image](https://user-images.githubusercontent.com/75933619/133035524-e83e4112-2b53-41d9-8a34-379b2f7a740e.png)
+
+### 웹 페이지 레이아웃 유형
+
+* 고정형 레이아웃
+  * 고정형 2단 레이아웃
+  * 고정형 3단 레이아웃
+  * 부분 고정형 2단 레이아웃
+* 유동형 레이아웃
+  * 너비를 지정하는 속성인 width에 퍼센트(%)나 이엠(em) 단위를 사용
+  * 너비를 %로 설정하면 모바일 기기에서도 비율에 따라 크기가 자동으로 조절됨
+
+### 웹 페이지 구조 설계
+
+* 관련 코드
+  * 상단 헤더 레이아웃 : header, common.css
+  * 메인 콘텐츠 레이아웃
+    * 배너 만들기 : banner
+    *  고객센터, 공지사항, FAQ 만들기 : customer_notice_faq
+    * 사이트맵 만들기 : sitemap
+    * 고객센터, 공지사항, FAQ 만들기 : customer_notice_faq
+  * 하단 푸터 레이아웃 : footer
+
+* 웹 페이지를 분할한 뒤 레이아웃 태그를 적용한 예
+
+  ![image](https://user-images.githubusercontent.com/75933619/133049683-31cd8380-cd3a-46e2-80fa-110c23306338.png)
+
+* <section\> 태그
+  * 특정 구획을 하나의 섹션으로 나타냄
+* <article\> 태그
+  * 독립적인 콘텐츠를 표시할 때 사용
+
