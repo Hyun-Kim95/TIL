@@ -10,8 +10,6 @@
 
 # Spring
 
-# Linux
-
 # HTML
 
 # CSS
