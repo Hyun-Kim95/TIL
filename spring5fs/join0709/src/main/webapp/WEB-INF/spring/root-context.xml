@@ -18,9 +18,9 @@
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
 		<property name="url"
-			value="jdbc:log4jdbc:mysql://127.0.0.1:8086/spring5fs?serverTimezone=UTC"></property>
-		<property name="username" value="root"></property>
-		<property name="password" value="1234"></property>
+			value="jdbc:log4jdbc:mysql://localhost:8086/spring5fs?serverTimezone=UTC"></property>
+		<property name="username" value="spring5"></property>
+		<property name="password" value="spring5"></property>
 	</bean>
 
 	<!-- mybatis SqlSessionFactoryBean -->
