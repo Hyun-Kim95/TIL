@@ -6,7 +6,6 @@ public class UserVO {
 	String email;
 	String password;
 	
-	
 	public String getUsername() {
 		return username;
 	}
