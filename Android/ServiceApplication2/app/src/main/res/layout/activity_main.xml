@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="34sp" />
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="34sp" />
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="결과 : ?"
+        android:textSize="20pt"/>
+    <Button
+        android:id="@+id/btn_plus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="더하기"
+        android:onClick="onClick"
+        android:textSize="34sp" />
+    <Button
+        android:id="@+id/btn_plus_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="더하기 결과"
+        android:onClick="onClick"
+        android:textSize="34sp" />
+    <Button
+        android:id="@+id/btn_minus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="빼기"
+        android:onClick="onClick"
+        android:textSize="34sp" />
+    <Button
+        android:id="@+id/btn_multiply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="곱하기"
+        android:onClick="onClick"
+        android:textSize="34sp" />
+    <Button
+        android:id="@+id/btn_division"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="나누기"
+        android:onClick="onClick"
+        android:textSize="34sp" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">첫번째 앱.</string>
+    <string name="btn01">버튼 1</string>
+    <string name="btn03">버튼 3</string>
+    <string name="btn04">버튼 4</string>
+    <string name="btn05">버튼 5</string>
+    <string name="btn06">버튼 6</string>
+</resources>

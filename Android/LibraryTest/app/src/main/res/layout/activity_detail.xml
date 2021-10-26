@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="413dp"
+        android:layout_height="55dp"
+        android:text="상세정보"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-1dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title_word"
+            android:layout_width="78dp"
+            android:layout_height="72dp"
+            android:text="책 제목" />
+
+        <TextView
+            android:id="@+id/detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="책 제목" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/author_word"
+            android:layout_width="77dp"
+            android:layout_height="80dp"
+            android:text="지은이" />
+
+        <TextView
+            android:id="@+id/detail_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="지은이" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/publisher_word"
+            android:layout_width="78dp"
+            android:layout_height="82dp"
+            android:text="출판사" />
+
+        <TextView
+            android:id="@+id/detail_publisher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="출판사" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/able_word"
+            android:layout_width="80dp"
+            android:layout_height="103dp"
+            android:text="대출여부" />
+
+        <TextView
+            android:id="@+id/detail_able"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="대출가능" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/summary_word"
+            android:layout_width="81dp"
+            android:layout_height="129dp"
+            android:text="줄거리" />
+
+        <TextView
+            android:id="@+id/detail_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="줄거리" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:text="대출" />
+</LinearLayout>

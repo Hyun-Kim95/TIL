@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="128dp"
+        android:layout_height="37dp"
+        android:text="이름"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteY="40dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/text_name"
+        tools:layout_editor_absoluteY="40dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_tel"
+        android:layout_width="128dp"
+        android:layout_height="49dp"
+        android:text="전화번호"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/text_name"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edit_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/text_tel"
+        app:layout_constraintTop_toBottomOf="@+id/edit_name" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="413dp"
+        android:layout_height="51dp"
+        android:onClick="insert"
+        android:text="추가"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_tel" />
+
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="413dp"
+        android:layout_height="49dp"
+        android:onClick="search"
+        android:text="탐색"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_add" />
+    <Button
+        android:layout_width="417dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="48dp"
+        android:text="리스트"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_search"
+        android:onClick="list"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

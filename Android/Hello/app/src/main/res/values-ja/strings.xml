@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">最初のアプリ.</string>
+    <string name="btn01">ボタン 1</string>
+    <string name="btn03">ボタン 3</string>
+    <string name="btn04">ボタン 4</string>
+    <string name="btn05">ボタン 5</string>
+    <string name="btn06">ボタン 6</string>
+</resources>
