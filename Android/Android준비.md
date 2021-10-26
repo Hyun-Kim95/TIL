@@ -7,6 +7,7 @@
 
 ### 프로젝트 준비
 
+* 저장되는 주소 : C:\Users\User\AndroidStudioProjects
 * Empty 로 돼있는 프로젝트로 시작
 * 한글 이름은 피하는걸 추천
 * Language : Java
